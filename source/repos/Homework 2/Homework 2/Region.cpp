@@ -6,27 +6,47 @@ using namespace std;
 
 Region::Region()
 {
-	cout << "Sasex" << endl;
-	this->Name = new char[strlen("Sasex") + 1];
-	strcpy(this->Name, "Sasex");
-	Index = 1;
+	cout << "Sussex" << endl;
+	this->Name = new char[strlen("Sussex") + 1];
+	strcpy(this->Name, "Sussex");
 }
 
-Region::Region(const Region&a)
+Region::Region(const char*Name, int People, const char*Title):Country (Title,People)
 {
-	cout << "Copy Region";
+	SetName(Name);
+}
+
+Region::Region(const Region&a):Country()
+{
+	cout << "Copy Region"<<endl;
 	SetName(a.Name);
-	SetIndex(a.Index);
 }
 
 const Region & Region::operator=(const Region &a)
-{
+{		
+	cout << "Operator copy" << endl;
 	delete[] Name;
+	Country::operator=(a);
 	SetName(a.Name);
-	SetIndex(a.Index);
 	return*this;
+}
+
+void Region::Print() {
+	Country::Print();
+	cout << " " << Name << endl;
+}
+
+void Region::Input()
+{
+		char buf[25];
+		cout << endl;
+		cout << "Name of region: ";
+		delete[] Name;
+		cin >> buf;
 }
 
 Region::~Region()
 {
+	cout << "Destruct region" << endl;
+	delete[]Name;
 };

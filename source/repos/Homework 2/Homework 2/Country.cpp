@@ -41,6 +41,16 @@ void Country::Print()
 
 void Country::Input()
 {
+	cout << "Input Country" << endl << "/n";
+		cout << "Country: ";
+		char abc[125];
+		delete[] Title;
+		cin >> abc;
+		SetTitle(abc);
+		cout << "Population: "<<endl;
+		cin >> People;
+		SetPeople(People);
+		
 }
 
 Country::~Country()

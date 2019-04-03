@@ -4,28 +4,30 @@
 
 using namespace std;
 
-class Lorry :
+class lorry :
 	public Car
 {
 	char *Wlascicel;
-
 public:
-	Lorry();
+	lorry();
 
-	char *getWlascicel(void)
-	{
-		return Wlascicel;
-}
+	char * getWlascicel(void) { return Wlascicel; }
 
-void setWlascicel(const char* w) 
-{
-	this->Wlascicel = new char[strlen(w) + 1];
-	strcpy(this->Wlascicel);
-}
+	void setWlascicel(const char* w) {
+		this->Wlascicel = new char[strlen(w) + 1];
+		strcpy(this->Wlascicel, w);
+	}
 	void Print() const;
-	Lorry(const char*, int, const char*);
-	Lorry(const Lorry&);
-	const Lorry& operator  (const Lorry&a);
-	~Lorry();
+
+	void Input();
+
+	~lorry();
+
+	lorry(const char*, const int, const char*);
+
+
+	lorry(const lorry&);
+	const lorry& operator = (const lorry &);
 };
+
 

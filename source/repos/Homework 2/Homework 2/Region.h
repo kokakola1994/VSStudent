@@ -2,48 +2,24 @@
 #include "Country.h"
 using namespace std;
 
-class Region :
-	public Country
+class Region : Country
 {
-	char *Name;
-	int Index;
+	char*Name;
+
 public:
 	Region();
-	Region(const char *Name, int Index, char *Country)
+	char* GetName(void)	{return Name;}
+	void SetName(const char *Name)
 	{
 		this->Name = new char[strlen(Name) + 1];
 		strcpy(this->Name, Name);
-
-		this->Index =Index;
-
-		this->Name = new char[strlen(Country) + 1];
-		strcpy(this->Name, Country);
 	}
-
+	void Print();
+	void Input();
+	Region(const char*, int ,const char*);
 	Region(const Region&);
 	const Region& operator = (const Region&);
 
-	void SetName(char *Name)
-	{
-		this->Name = new char[strlen(Name) + 1];
-		strcpy(this->Name, Name);
-	}
-	char * GetName()	
-	{
-		return Name;
-	}
-	void SetIndex(int)
-	{
-		this->Index = Index;
-	}
-	void Print()
-	{
-
-	}
-	void Input()
-	{
-
-	}
 	~Region();
 };
 

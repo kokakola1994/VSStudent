@@ -2,53 +2,45 @@
 #include "Lorry.h"
 
 
-Lorry::Lorry()
-{
-
-}
-
-void Lorry::Wlascicel()
-{
-	cout << "Constructor domyslowy lorry..." << endl;
+lorry::lorry() :Car() {
+	cout << "Constr lor.. " << endl;
 	setWlascicel("Kowalski");
 }
 
 
-Lorry::Lorry (const char*Name, int Age, const char Wlascicel) : Car(Name, Age)
-{
-	cout << "Construktor z argumentami Lorry..." << endl;
-	setWlascicel(Wlascicel);
+
+lorry::~lorry() {
+	cout << "Destruct lorry ... " << endl;
+	delete[] Wlascicel;
 }
 
-
-Lorry::~Lorry()
-{
-	cout << "Destruct Lorry" << endl;
-	delete[]Wlascicel;
-}
-
-
-void Lorry::Print() const
-{
+void lorry::Print() const {
 	Car::Print();
 	cout << " " << Wlascicel << endl;
 }
 
-Lorry::Lorry(const char *, int, const char *)
-{
-}
+lorry::lorry(const char *Name, int Age, const char *Wlascicel) :Car(Name, Age) {
+	cout << "Construktor z arg larry... " << endl;
+	setWlascicel(Wlascicel);
 
-Lorry::Lorry(const Lorry& a) : Car(a)
-{
-	cout << "Constructor copy Lorry..." << endl;
+}
+lorry::lorry(const lorry& a) : Car() {
+	cout << " " << endl;
 	setWlascicel(a.Wlascicel);
 }
 
-const Lorry&operator= (const Lorry &a)
-{
-	cout << "Operator copy Lorry..." << endl;
-	delete[]Wlascicel;
+const lorry& lorry::operator = (const lorry &a) {
+	cout << "Operator cope lorr ... " << endl;
+	delete[] Wlascicel;
 	Car::operator= (a);
 	setWlascicel(a.Wlascicel);
-	return this;
+	return *this;
+}
+void lorry::Input() {
+	Car::Input();
+	delete[] Wlascicel;
+	cout << "Wlascicel: ";
+	char buf[125];
+	cin >> buf;
+	setWlascicel(buf);
 }

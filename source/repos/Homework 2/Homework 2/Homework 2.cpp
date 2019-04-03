@@ -9,38 +9,37 @@
 
 using namespace std;
 
-void Egypt()
+/*void Egypt()
 {
 	Country a,b("Egypt",80), c(b), g=b;
 	a.Print();
-}
-
-void regions()
-{
-	//Region a("Kairo", 5);
-		//a.Print();
 }
 
 void copy(Country*a)
 {
 	a->SetTitle("Germany");
 	a->SetPeople(80);
-}
+}*/
 
-void copy(Region*a)
-{
-	//a->SetName("Bawaria");
-	a->SetIndex(1);
-
-}
 int main()
 {
-	Country a,b ("Egypt", 80), c(b);
-	a.Print();
-	b.Print();
-	c = b = a;
-	c.Print();
-	b.Print();
+	Region*a = new Region;
+	a->Print();
+	delete a;
+	Country one, two;
+	one.SetTitle("Egypt");
+	two.SetPeople(80);
+	one.Print();
+	two.Print();
+	one.Input();
+	two.Input();
+	//Region*tree = new Region("Saxony");
+	//Country a,b ("Egypt", 80), c(b);
+	//a.Print();
+	//b.Print();
+	//c = b = a;
+	//c.Print();
+	//b.Print();
 	system("pause");
 	return 0;
 }
