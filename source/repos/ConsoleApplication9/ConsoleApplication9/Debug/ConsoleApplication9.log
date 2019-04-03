@@ -1,0 +1,9 @@
+﻿  ConsoleApplication9.cpp
+c:\users\zaboh\source\repos\consoleapplication9\consoleapplication9\consoleapplication9.cpp(30): error C2065: 'i': undeclared identifier
+c:\users\zaboh\source\repos\consoleapplication9\consoleapplication9\consoleapplication9.cpp(30): error C2660: 'srand': function does not take 0 arguments
+  c:\program files (x86)\windows kits\10\include\10.0.17134.0\ucrt\stdlib.h(346): note: see declaration of 'srand'
+c:\users\zaboh\source\repos\consoleapplication9\consoleapplication9\consoleapplication9.cpp(30): error C2059: syntax error: ')'
+c:\users\zaboh\source\repos\consoleapplication9\consoleapplication9\consoleapplication9.cpp(31): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'int *'
+c:\users\zaboh\source\repos\consoleapplication9\consoleapplication9\consoleapplication9.cpp(44): error C2059: syntax error: '}'
+c:\users\zaboh\source\repos\consoleapplication9\consoleapplication9\consoleapplication9.cpp(45): error C2059: syntax error: '}'
+c:\users\zaboh\source\repos\consoleapplication9\consoleapplication9\consoleapplication9.cpp(45): error C2143: syntax error: missing ';' before '}'

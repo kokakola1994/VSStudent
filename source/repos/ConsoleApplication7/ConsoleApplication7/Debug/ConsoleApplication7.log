@@ -1,0 +1,6 @@
+﻿  ConsoleApplication7.cpp
+c:\users\zaboh\source\repos\consoleapplication7\consoleapplication7\consoleapplication7.cpp(30): warning C4473: 'scanf_s' : not enough arguments passed for format string
+  c:\users\zaboh\source\repos\consoleapplication7\consoleapplication7\consoleapplication7.cpp(30): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+  c:\users\zaboh\source\repos\consoleapplication7\consoleapplication7\consoleapplication7.cpp(30): note: the missing variadic argument 2 is required by format string '%c'
+  c:\users\zaboh\source\repos\consoleapplication7\consoleapplication7\consoleapplication7.cpp(30): note: this argument is used as a buffer size
+  ConsoleApplication7.vcxproj -> C:\Users\zaboh\source\repos\ConsoleApplication7\Debug\ConsoleApplication7.exe

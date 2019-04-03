@@ -1,0 +1,3 @@
+﻿  PlikTest.cpp
+c:\users\zaboh\source\repos\pliktest\pliktest\pliktest.cpp(16): warning C4018: '<': signed/unsigned mismatch
+  PlikTest.vcxproj -> C:\Users\zaboh\source\repos\PlikTest\Debug\PlikTest.exe

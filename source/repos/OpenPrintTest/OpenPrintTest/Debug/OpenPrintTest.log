@@ -1,0 +1,8 @@
+﻿  OpenPrintTest.cpp
+c:\users\zaboh\source\repos\openprinttest\openprinttest\openprinttest.cpp(21): warning C4473: 'fscanf_s' : not enough arguments passed for format string
+  c:\users\zaboh\source\repos\openprinttest\openprinttest\openprinttest.cpp(21): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+  c:\users\zaboh\source\repos\openprinttest\openprinttest\openprinttest.cpp(21): note: the missing variadic argument 2 is required by format string '%s'
+  c:\users\zaboh\source\repos\openprinttest\openprinttest\openprinttest.cpp(21): note: this argument is used as a buffer size
+c:\users\zaboh\source\repos\openprinttest\openprinttest\openprinttest.cpp(25): warning C4474: 'printf' : too many arguments passed for format string
+  c:\users\zaboh\source\repos\openprinttest\openprinttest\openprinttest.cpp(25): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  OpenPrintTest.vcxproj -> C:\Users\zaboh\source\repos\OpenPrintTest\Debug\OpenPrintTest.exe

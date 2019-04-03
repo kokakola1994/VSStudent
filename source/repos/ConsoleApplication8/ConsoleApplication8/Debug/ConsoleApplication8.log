@@ -1,0 +1,8 @@
+﻿  ConsoleApplication8.cpp
+c:\users\zaboh\source\repos\consoleapplication8\consoleapplication8\consoleapplication8.cpp(19): warning C4778: 'scanf_s' : unterminated format string '%'
+c:\users\zaboh\source\repos\consoleapplication8\consoleapplication8\consoleapplication8.cpp(19): warning C4474: 'scanf_s' : too many arguments passed for format string
+  c:\users\zaboh\source\repos\consoleapplication8\consoleapplication8\consoleapplication8.cpp(19): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+c:\users\zaboh\source\repos\consoleapplication8\consoleapplication8\consoleapplication8.cpp(22): warning C4778: 'printf' : unterminated format string '%'
+c:\users\zaboh\source\repos\consoleapplication8\consoleapplication8\consoleapplication8.cpp(22): warning C4474: 'printf' : too many arguments passed for format string
+  c:\users\zaboh\source\repos\consoleapplication8\consoleapplication8\consoleapplication8.cpp(22): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  ConsoleApplication8.vcxproj -> C:\Users\zaboh\source\repos\ConsoleApplication8\Debug\ConsoleApplication8.exe

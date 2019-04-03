@@ -1,0 +1,9 @@
+﻿  pch.cpp
+  PlikLab.cpp
+c:\users\zaboh\source\repos\pliklab\pliklab\pliklab.cpp(65): warning C4473: 'fscanf_s' : not enough arguments passed for format string
+  c:\users\zaboh\source\repos\pliklab\pliklab\pliklab.cpp(65): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+  c:\users\zaboh\source\repos\pliklab\pliklab\pliklab.cpp(65): note: the missing variadic argument 2 is required by format string '%s'
+  c:\users\zaboh\source\repos\pliklab\pliklab\pliklab.cpp(65): note: this argument is used as a buffer size
+c:\users\zaboh\source\repos\pliklab\pliklab\pliklab.cpp(69): warning C4474: 'printf' : too many arguments passed for format string
+  c:\users\zaboh\source\repos\pliklab\pliklab\pliklab.cpp(69): note: placeholders and their parameters expect 0 variadic arguments, but 1 were provided
+  PlikLab.vcxproj -> C:\Users\zaboh\source\repos\PlikLab\Debug\PlikLab.exe

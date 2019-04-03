@@ -1,0 +1,6 @@
+﻿  ConsoleApplication10.cpp
+c:\users\zaboh\source\repos\consoleapplication10\consoleapplication10\consoleapplication10.cpp(36): warning C4473: 'scanf_s' : not enough arguments passed for format string
+  c:\users\zaboh\source\repos\consoleapplication10\consoleapplication10\consoleapplication10.cpp(36): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+  c:\users\zaboh\source\repos\consoleapplication10\consoleapplication10\consoleapplication10.cpp(36): note: the missing variadic argument 2 is required by format string '%c'
+  c:\users\zaboh\source\repos\consoleapplication10\consoleapplication10\consoleapplication10.cpp(36): note: this argument is used as a buffer size
+  ConsoleApplication10.vcxproj -> C:\Users\zaboh\source\repos\ConsoleApplication10\Debug\ConsoleApplication10.exe

@@ -1,0 +1,4 @@
+﻿  ConsoleApplication3.cpp
+c:\users\zaboh\source\repos\consoleapplication3\consoleapplication3\consoleapplication3.cpp(13): warning C4552: '+': result of expression not used
+c:\users\zaboh\source\repos\consoleapplication3\consoleapplication3\consoleapplication3.cpp(18): warning C4552: '+': result of expression not used
+c:\users\zaboh\source\repos\consoleapplication3\consoleapplication3\consoleapplication3.cpp(10): fatal error C1075: '{': no matching token found

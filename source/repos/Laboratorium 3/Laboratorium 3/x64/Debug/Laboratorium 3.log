@@ -1,0 +1,8 @@
+﻿  pch.cpp
+  Laboratorium 3.cpp
+c:\users\zaboh\source\repos\laboratorium 3\laboratorium 3\laboratorium 3.cpp(12): warning C4473: 'scanf_s' : not enough arguments passed for format string
+  c:\users\zaboh\source\repos\laboratorium 3\laboratorium 3\laboratorium 3.cpp(12): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
+  c:\users\zaboh\source\repos\laboratorium 3\laboratorium 3\laboratorium 3.cpp(12): note: the missing variadic argument 2 is required by format string '%50s'
+  c:\users\zaboh\source\repos\laboratorium 3\laboratorium 3\laboratorium 3.cpp(12): note: this argument is used as a buffer size
+c:\users\zaboh\source\repos\laboratorium 3\laboratorium 3\laboratorium 3.cpp(13): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  Laboratorium 3.vcxproj -> C:\Users\zaboh\source\repos\Laboratorium 3\x64\Debug\Laboratorium 3.exe

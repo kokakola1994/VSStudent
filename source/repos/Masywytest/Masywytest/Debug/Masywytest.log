@@ -1,0 +1,3 @@
+﻿  Masywytest.cpp
+c:\users\zaboh\source\repos\masywytest\masywytest\masywytest.cpp(34): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  Masywytest.vcxproj -> C:\Users\zaboh\source\repos\Masywytest\Debug\Masywytest.exe
