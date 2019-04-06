@@ -33,7 +33,7 @@ int main()
 	two.Print();
 	one.Input();
 	two.Input();
-	//Region*tree = new Region("Saxony");
+	Region*tree = new Region("Saxony");
 	//Country a,b ("Egypt", 80), c(b);
 	//a.Print();
 	//b.Print();
