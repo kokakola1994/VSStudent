@@ -93,5 +93,5 @@ Ulamek Ulamek::operator-() const
 
 Ulamek::~Ulamek()
 {
-	cout << "Destruktor..." << (*this);
+	cout << "Destruktor..." << (*this) << endl;
 }
