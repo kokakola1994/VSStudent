@@ -21,13 +21,13 @@ public:
 	void setlicz(int a) { licz = a; };
 	void setmian(int b) { if (b == 0) b = 1; mian = b; };
 
-	friend Ulamek Dodaj(const Ulamek&, const Ulamek&);
+	//friend Ulamek Dodaj(const Ulamek&, const Ulamek&);
 	friend Ulamek operator+(const Ulamek&, const Ulamek&);
 	friend Ulamek operator*(const Ulamek&, const Ulamek&);
 	friend Ulamek operator/(const Ulamek&, const Ulamek&);
-	Ulamek& Dodaj(const Ulamek&);
+	friend Ulamek operator-(const Ulamek&, const Ulamek&);
 	Ulamek& operator+=(const Ulamek&);
-	Ulamek& operator-=(const Ulamek&); //доробити оператора
+	Ulamek& operator-=(const Ulamek&);
 	Ulamek& operator/=(const Ulamek&);
 	Ulamek& operator*=(const Ulamek&);
 
@@ -35,18 +35,18 @@ public:
 	friend istream &operator >>(istream &stream, Ulamek &b);
 	friend bool operator == (const Ulamek &f, const Ulamek &t);
 	friend bool operator != (const Ulamek &f, const Ulamek &t);
-	friend bool operator <= (const Ulamek &f, const Ulamek &t);//pereviryty operatora
-	friend bool operator > (const Ulamek &f, const Ulamek &t); //pereviryty operatora 
-	friend bool operator >= (const Ulamek &f, const Ulamek &t); //pereviryty operatora
-	friend bool operator < (const Ulamek &f, const Ulamek &t); //pereviryty operatora
+	friend bool operator <= (const Ulamek &f, const Ulamek &t);
+	friend bool operator > (const Ulamek &f, const Ulamek &t);  
+	friend bool operator >= (const Ulamek &f, const Ulamek &t); 
+	friend bool operator < (const Ulamek &f, const Ulamek &t); 
 	Ulamek operator-() const;
 	Ulamek& operator++ (void); //не знаю що робити з цим оператором
-	Ulamek& operator++ (int); //доробити оператора
+	Ulamek& operator++ (int); 
 	Ulamek& operator-- (void); // доробити оператора
-	Ulamek& operator-- (int); // доробити оператора
+	Ulamek& operator-- (int); 
 	
-	//explicit operator double() { return (double)licz / mian; }
-	//explicit operator int() { return licz / mian; }
+	explicit operator double() { return (double)licz / mian; }
+	explicit operator int() { return licz / mian; }
 
 	~Ulamek();
 };

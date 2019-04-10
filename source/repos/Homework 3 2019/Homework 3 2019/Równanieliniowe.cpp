@@ -1,12 +1,10 @@
-#include "pch.h"
-#include "R?wnanieliniowe.h"
+﻿#include "pch.h"
+#include "Równanieliniowe.h"
 
-
-R?wnanieliniowe::R?wnanieliniowe()
+Lenght::Lenght()
 {
 }
 
-
-R?wnanieliniowe::~R?wnanieliniowe()
+Lenght::~Lenght()
 {
 }

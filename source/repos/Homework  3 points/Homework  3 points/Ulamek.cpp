@@ -31,13 +31,13 @@ void Ulamek::Print() const
 {
 	cout << licz << "/" << mian << endl;
 }
-Ulamek Dodaj(const Ulamek& a, const Ulamek& b) {
+/*Ulamek Dodaj(const Ulamek& a, const Ulamek& b) {
 	Ulamek c;
 	c.licz = a.licz*b.mian + a.mian*b.licz;
 	c.mian = a.mian * b.mian;
 	c.reduc();
 	return c;
-}
+}*/
 
 Ulamek operator+(const Ulamek& a, const Ulamek& b) {
 
@@ -63,6 +63,14 @@ Ulamek operator/(const Ulamek &a, const Ulamek &b)
 	c.reduc();
 	return c;
 }
+Ulamek operator-(const Ulamek &a, const Ulamek &b)
+{
+	Ulamek c;
+	c.licz = a.licz*b.mian - a.mian*b.licz;
+	c.mian = a.mian * b.mian;
+	c.reduc();
+	return c;
+}
 ostream & operator<<(ostream & stream, const Ulamek & b)
 {
 	stream << b.licz << "/" << b.mian << endl;
@@ -83,37 +91,37 @@ bool operator!=(const Ulamek & f, const Ulamek & t)
 	if (!(f == t)) return true;
 	return false;
 }
-bool operator<=(const Ulamek & f, const Ulamek & t) //pereviryty operatora
+bool operator<=(const Ulamek & f, const Ulamek & t) 
 {
 	if (f.licz*t.mian <= f.mian*t.licz) return true;
 	return false;
 }
 
-bool operator>(const Ulamek & f, const Ulamek & t) //pereviryty operatora
+bool operator>(const Ulamek & f, const Ulamek & t) 
 {
 	if (f.licz*t.mian > f.mian*t.licz) return true;
 	return false;
 }
 
-bool operator>=(const Ulamek & f, const Ulamek & t) //pereviryty operatora
+bool operator>=(const Ulamek & f, const Ulamek & t) 
 {
 	if (f.licz*t.mian >= f.mian*t.licz) return true;
 	return false;
 }
 
-bool operator<(const Ulamek & f, const Ulamek & t) //pereviryty operatora
+bool operator<(const Ulamek & f, const Ulamek & t) 
 {
 	if (f.licz*t.mian > f.mian*t.licz) return true;
 	return false;
 }
 
-Ulamek& Ulamek::Dodaj(const Ulamek& b)
+/*Ulamek& Ulamek::Dodaj(const Ulamek& b)
 {
 	this->licz = this->licz* b.mian + this->mian*b.licz;
 	this->mian = this->mian*b.mian;
 	this->reduc();
 	return *this;
-}
+}*/
 Ulamek& Ulamek::operator+=(const Ulamek& b)
 {
 	this->licz = this->licz* b.mian + this->mian*b.licz;
@@ -122,7 +130,7 @@ Ulamek& Ulamek::operator+=(const Ulamek& b)
 	return *this;
 }
 
-Ulamek & Ulamek::operator-=(const Ulamek &b) //дописати оператора
+Ulamek & Ulamek::operator-=(const Ulamek &b) 
 {
 	this->licz = this->licz* b.mian - this->mian*b.licz;
 	this->mian = this->mian*b.mian;
@@ -155,26 +163,28 @@ Ulamek Ulamek::operator-() const
 
 Ulamek & Ulamek::operator++(void) //доробити оператора
 {
-	Ulamek rez(++this->licz, this->mian);
-	return rez;
+	this->licz -= 1;
+	return *this;
 }
 
-Ulamek & Ulamek::operator++(int) //не зовсім розумію що в кінці має вертатитсь
+Ulamek & Ulamek::operator++(int) 
 {
-	Ulamek rez(++this->licz, this->mian);
-	return rez;
+	Ulamek licz(*this);
+	++(*this);
+	return *this;
 }
 
 Ulamek & Ulamek::operator--(void) //доробити оператора
 {
-	Ulamek rez(--this->licz, this->mian);
-	return rez;
+	this->licz += 1;
+	return *this;
 }
 
-Ulamek & Ulamek::operator--(int) //не зовсім розумію що в кінці має вертатитсь
+Ulamek & Ulamek::operator--(int) 
 {
-	Ulamek rez(--this->licz, this->mian);
-	return rez;
+	Ulamek rez(*this);
+	--(*this);
+	return *this;
 }
 
 Ulamek::~Ulamek()

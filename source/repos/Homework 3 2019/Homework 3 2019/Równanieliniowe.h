@@ -1,8 +1,8 @@
 ﻿#pragma once
-class Równanieliniowe
+class Lenght
 {
 public:
-	Równanieliniowe();
-	~Równanieliniowe();
+	Lenght();
+	~Lenght();
 };
 

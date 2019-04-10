@@ -1,0 +1,14 @@
+﻿'Homework  3 points.exe' (Win32): Loaded 'C:\Users\zaboh\source\repos\Homework  3 points\x64\Debug\Homework  3 points.exe'. Symbols loaded.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\ntdll.dll'. Cannot find or open the PDB file.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\kernel32.dll'. Cannot find or open the PDB file.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\KernelBase.dll'. Cannot find or open the PDB file.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\msvcp140d.dll'. Cannot find or open the PDB file.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\vcruntime140d.dll'. Cannot find or open the PDB file.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\ucrtbased.dll'. Cannot find or open the PDB file.
+The thread 0x1414 has exited with code 0 (0x0).
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\kernel.appcore.dll'. Cannot find or open the PDB file.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\msvcrt.dll'. Cannot find or open the PDB file.
+'Homework  3 points.exe' (Win32): Loaded 'C:\Windows\System32\rpcrt4.dll'. Cannot find or open the PDB file.
+The thread 0xd2c has exited with code 0 (0x0).
+The thread 0x1f18 has exited with code 0 (0x0).
+The program '[14296] Homework  3 points.exe' has exited with code 0 (0x0).

@@ -12,13 +12,56 @@ using namespace std;
 
 int main()
 {
-	Ulamek a(1, 2), b(1, 2), c(5, 6);
+	Ulamek a(1, 2), b(1, 2), c(1,2);
+	cin >> a;
 	cin >> b;
+	c = a + b;
+	c = a - b;
+	c = a * b;
+	c = a / b;
 	a += b;
-	cout << a;
-	cout << -a;
-	if (a == c)	cout << "rowne" << endl;
+	cout << "+=\n" << a;
+	a -= b;
+	cout << "-=\n" << a;
+	a *= b;
+	cout << "*=\n" << a ;
+	a /= b;
+	cout << "/\n" << a;
+	if (a == b)	cout << "rowne" << endl;
 	else cout << "nie równe" << endl;
+	if (a != b)	cout << "rowne" << endl;
+	else cout << "nie równe" << endl;
+	if (a <= c)	cout << "rowne" << endl;
+	else cout << "nie równe" << endl;
+	if (a > c)	cout << "rowne" << endl;
+	else cout << "nie równe" << endl;
+	if (a >= c)	cout << "rowne" << endl;
+	else cout << "nie równe" << endl;
+	if (a < c)	cout << "rowne" << endl;
+	else cout << "nie równe" << endl;
+	cout << -a;
+	cout << a;
+	cout << "increment\n" << a++;
+	cout << "decrement\n" << a--;
+	cout << ++a;
+	cout << --a;
+	c = ++a;
+	c = --a;
+	cout << c;
+	Ulamek rez = (a, b);
+	cout << rez;
+	a.Print();
+	b.Print();
+	c.Print();
+	
+	
+	//Ulamek a(1, 2), b(1, 2), c(5, 6);
+	//cin >> b;
+	//a += b;
+	//cout << a;
+	//cout << -a;
+	//if (a == c)	cout << "rowne" << endl;
+	//else cout << "nie równe" << endl;
 	//a.Print();
 	//cout << endl;
 	//b.Print();
@@ -28,17 +71,17 @@ int main()
 	//c = Dodaj(a, b);
 	//c.Print();
 
-	cout << endl;
-	/*Ulamek rez = Mnog(a,b)*/
+	//cout << endl;
+	//Ulamek rez = (a, b);
 
 
-	Ulamek d(1, 2), e(2, 2);
-	Ulamek f;
-	cin >> f;
-	cout << d + f;
+	//Ulamek d(1, 2), e(2, 2);
+	//Ulamek f;
+	//cin >> f;
+	//cout << d + f;
 	//cout << a - b;
-	cout << d * f;
-	cout << d / f;
+	//cout << d * f;
+	//cout << d / f;
 	//cout << a += b;
 	//cout << a -= b;
 	//cout << a *= b;
