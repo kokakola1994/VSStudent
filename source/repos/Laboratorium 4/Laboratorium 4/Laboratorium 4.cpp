@@ -3,12 +3,33 @@
 
 #include "pch.h"
 #include <iostream>
-
+#include "Shape.h"
+#include "Circle.h"
+#include "Rectangle.h"
+#include "Triangle.h"
+#define MAX 10
 using namespace std;
 
 int main()
 {
-    
+	Shape *arr[MAX];
+	for (int i = 0; i < MAX; i++)
+	{
+		arr[i] = NULL;
+	}
+	for (int i = 0; i < MAX; i++)
+	{
+		if (i % 3 == 0) arr[i] = new Triangle(1 + rand() % MAX, 1 + rand() % MAX, 1 + rand()%MAX);
+		else if (i % 3 == 1) arr[i] = new Rectangle(1 + rand() % MAX, 1 + rand() % MAX);
+		else arr[i] = new Circle(1 + rand() % MAX); 
+		arr[i]->print();
+		arr[i]->area();
+		arr[i]->obwod();
+	}
+	for (int i = 0; i < MAX; i++)
+		if (arr[i]) delete arr[i];
+	system("pause");
+	return 0;
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
