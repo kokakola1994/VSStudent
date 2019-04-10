@@ -163,31 +163,27 @@ Ulamek Ulamek::operator-() const
 
 Ulamek & Ulamek::operator++(void) //доробити оператора
 {
-	this->licz -= 1;
-	return *this;
+	return (*this += Ulamek(1, 1));
 }
 
 Ulamek & Ulamek::operator++(int) 
 {
-	Ulamek licz(*this);
-	++(*this);
+	*this = *this + (Ulamek());
 	return *this;
 }
 
 Ulamek & Ulamek::operator--(void) //доробити оператора
 {
-	this->licz += 1;
-	return *this;
+	return (*this -= Ulamek(1, 1));
 }
 
 Ulamek & Ulamek::operator--(int) 
 {
-	Ulamek rez(*this);
-	--(*this);
+	*this = *this - (Ulamek());
 	return *this;
 }
 
 Ulamek::~Ulamek()
 {
-	cout << "Destruktor..." << (*this);
+	//cout << "Destruktor..." << (*this);
 }

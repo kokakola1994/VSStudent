@@ -3,9 +3,6 @@
 
 #include "pch.h"
 #include <iostream>
-
-#include "pch.h"
-#include <iostream>
 #include "Ulamek.h"
 
 using namespace std;
@@ -20,13 +17,13 @@ int main()
 	c = a * b;
 	c = a / b;
 	a += b;
-	cout << "+=\n" << a;
+	cout << "+=" << a << endl;
 	a -= b;
-	cout << "-=\n" << a;
+	cout << "-=" << a << endl;
 	a *= b;
-	cout << "*=\n" << a ;
+	cout << "*=" << a << endl;
 	a /= b;
-	cout << "/\n" << a;
+	cout << "/" << a << endl;
 	if (a == b)	cout << "rowne" << endl;
 	else cout << "nie równe" << endl;
 	if (a != b)	cout << "rowne" << endl;
