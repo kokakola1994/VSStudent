@@ -7,6 +7,7 @@
 #include "Rectangle.h"
 #include "Diamond.h"
 #define MAX 6
+#define NUM 50
 
 using namespace std;
 
@@ -19,8 +20,8 @@ int main()
 	}
 	for (int i = 0; i < MAX; i++)
 	{
-		if (i % 2 == 0) arr[i] = new Rectangle(1 + rand() % MAX, 1 + rand() % MAX);
-		else if (i % 2 == 1) arr[i] = new Diamond(1 + rand() % MAX, 1 + rand() % MAX);
+		if (i % 2 == 0) arr[i] = new Rectangle(1 + rand() % NUM, 1 + rand() % NUM);
+		else if (i % 2 == 1) arr[i] = new Diamond(1 + rand() % NUM, 1 + rand() % NUM);
 		arr[i]->print();
 		arr[i]->area();
 		arr[i]->obwod();
