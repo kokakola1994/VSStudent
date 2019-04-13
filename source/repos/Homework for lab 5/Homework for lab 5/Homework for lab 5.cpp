@@ -6,7 +6,7 @@
 #include "Quadrangle.h"
 #include "Rectangle.h"
 #include "Diamond.h"
-#define MAX 10
+#define MAX 6
 
 using namespace std;
 
