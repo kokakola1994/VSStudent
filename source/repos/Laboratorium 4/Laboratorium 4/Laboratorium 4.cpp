@@ -8,6 +8,7 @@
 #include "Rectangle.h"
 #include "Triangle.h"
 #define MAX 10
+
 using namespace std;
 
 int main()
