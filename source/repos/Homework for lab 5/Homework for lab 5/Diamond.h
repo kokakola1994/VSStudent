@@ -1,6 +1,7 @@
 #pragma once
 #include "Quadrangle.h"
 #define romb sqrt(pow(x,2)+pow(y,2))
+
 class Diamond :
 	public Quadrangle
 {

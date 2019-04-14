@@ -6,6 +6,7 @@
 #include "Quadrangle.h"
 #include "Rectangle.h"
 #include "Diamond.h"
+#include "typeinfo.h"
 #define MAX 6
 #define NUM 50
 
@@ -28,6 +29,10 @@ int main()
 	}
 	for (int i = 0; i < MAX; i++)
 		if (arr[i]) delete arr[i];
+	typeid (Rectangle);
+	typeid(Diamond);
+	typeid(Quadrangle);
+		
 	system("pause");
 	return 0;
 }
