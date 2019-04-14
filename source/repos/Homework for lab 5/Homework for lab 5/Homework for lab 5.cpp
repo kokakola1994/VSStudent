@@ -29,10 +29,26 @@ int main()
 	}
 	for (int i = 0; i < MAX; i++)
 		if (arr[i]) delete arr[i];
-	typeid (Rectangle);
-	typeid(Diamond);
-	typeid(Quadrangle);
-		
+	Quadrangle *quad = new Rectangle(1 + rand() % NUM, 1 + rand() % NUM);
+	if (Rectangle*rec = dynamic_cast<Rectangle*>(quad))
+	{
+		cout << "Dynamic_cast Rectangle" << endl;
+	}
+	else
+	{
+		cout << "Dynamic_cast doesnt work" << endl;
+	}
+
+	quad = new Diamond(1 + rand() % NUM, 1 + rand() % NUM);
+	if (Diamond*dim = dynamic_cast<Diamond*>(quad))
+	{
+		cout << "Dynamic_cast Diamond" << endl;
+	}
+	else
+	{
+		cout << "Dynamic_cast doesnt work" << endl;
+	}
+
 	system("pause");
 	return 0;
 }
