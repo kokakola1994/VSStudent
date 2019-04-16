@@ -13,7 +13,9 @@ public:
 		x = ix; y = iy;
 	}
 	virtual ~Quadrangle()
-	{cout << "Deleting Quadrangle..." << endl; }
+	{
+		//cout << "Deleting Quadrangle..." << endl;
+	}
 	virtual void area()=0;
 	virtual void obwod()= 0;
 	virtual void print()=0;
