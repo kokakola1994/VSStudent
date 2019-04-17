@@ -7,19 +7,19 @@
 #include "Rectangle.h"
 #include "Diamond.h"
 #include "typeinfo.h"
-#define MAX 6
+#define MAX 9
 #define NUM 50
 
 using namespace std;
 
 int main()
 {
-	Quadrangle *arr[MAX];
+	Quadrangle *arr[MAX]; // tablice wskaznikow do klasy bazowej z 9 elementow
 	for (int i = 0; i < MAX; i++)
 	{
 		arr[i] = NULL;
 	}
-	for (int i = 0; i < MAX; i++)
+	for (int i = 0; i < 6; i++) //elementy-potomnymi przez trzy
 	{
 		if (i % 2 == 0) arr[i] = new Rectangle(1 + rand() % NUM, 1 + rand() % NUM);
 		else if (i % 2 == 1) arr[i] = new Diamond(1 + rand() % NUM, 1 + rand() % NUM);
@@ -36,7 +36,7 @@ int main()
 	}
 	else
 	{
-		cout << "Dynamic_cast doesnt work" << endl;
+		cout << "Dynamic_cast other object" << endl;
 	}
 
 	quad = new Diamond(1 + rand() % NUM, 1 + rand() % NUM);
@@ -46,7 +46,7 @@ int main()
 	}
 	else
 	{
-		cout << "Dynamic_cast doesnt work" << endl;
+		cout << "Dynamic_cast other object" << endl;
 	}
 
 	system("pause");
