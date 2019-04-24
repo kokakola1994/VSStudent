@@ -1,4 +1,0 @@
-﻿  matezytest.cpp
-c:\users\zaboh\source\repos\matezytest\matezytest\matezytest.cpp(13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-c:\users\zaboh\source\repos\matezytest\matezytest\matezytest.cpp(17): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  matezytest.vcxproj -> C:\Users\zaboh\source\repos\matezytest\Debug\matezytest.exe

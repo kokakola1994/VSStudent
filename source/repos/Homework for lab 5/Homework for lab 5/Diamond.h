@@ -14,5 +14,6 @@ public:
 	void print() { cout << "A diamond with diagonal: " << x << " and " << y << endl; }
 	void area() { cout << "has an area off: " << 0.5*y*x << endl; }
 	void obwod() { cout << "has a perimetr off:  " << 2*(romb) << endl; }
+	void name() { cout << "typeid name Diamond" << endl; };
 };
 

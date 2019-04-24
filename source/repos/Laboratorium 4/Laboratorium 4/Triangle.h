@@ -2,9 +2,26 @@
 #include "Shape.h"
 
 #include <iostream>
-class Triangle :
-	public Shape
+class Triangle : public Shape
+
+	class Triangle : public Shapes
+
 {
+
+protected:
+
+	int x1, y1, x2, y2, x3, y3;
+
+public:
+
+	Triangle(int x1 = 0, int y1 = 0, int x2 = 100, int y2 = 100, int x3 = 150, int y3 = 0);
+
+	~Triangle() { }
+
+	void Draw(HWND &hwnd, HDC &hdc);
+
+};
+/*{
 protected:
 	double z;
 public:
@@ -17,5 +34,5 @@ public:
 	}
 		void obwod() { cout << "has a perimetr of " << x + y + z << endl; }
 	
-};
+};*/
 

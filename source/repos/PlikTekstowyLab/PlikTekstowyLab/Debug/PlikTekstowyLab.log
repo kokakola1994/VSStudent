@@ -1,8 +1,0 @@
-﻿  pch.cpp
-  PlikTekstowyLab.cpp
-c:\users\zaboh\source\repos\pliktekstowylab\pliktekstowylab\pliktekstowylab.cpp(21): warning C4473: 'fscanf_s' : not enough arguments passed for format string
-  c:\users\zaboh\source\repos\pliktekstowylab\pliktekstowylab\pliktekstowylab.cpp(21): note: placeholders and their parameters expect 2 variadic arguments, but 1 were provided
-  c:\users\zaboh\source\repos\pliktekstowylab\pliktekstowylab\pliktekstowylab.cpp(21): note: the missing variadic argument 2 is required by format string '%c'
-  c:\users\zaboh\source\repos\pliktekstowylab\pliktekstowylab\pliktekstowylab.cpp(21): note: this argument is used as a buffer size
-c:\users\zaboh\source\repos\pliktekstowylab\pliktekstowylab\pliktekstowylab.cpp(22): warning C4477: 'printf_s' : format string '%c' requires an argument of type 'int', but variadic argument 1 has type 'char *'
-  PlikTekstowyLab.vcxproj -> C:\Users\zaboh\source\repos\PlikTekstowyLab\Debug\PlikTekstowyLab.exe

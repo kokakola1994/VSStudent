@@ -8,7 +8,7 @@ class Quadrangle
 protected:
 	double x, y;
 public:
-	Quadrangle(double ix = 0, double iy = 0) 
+	Quadrangle(double ix = 0, double iy = 0)
 	{
 		x = ix; y = iy;
 	}
@@ -19,6 +19,7 @@ public:
 	virtual void area()=0;
 	virtual void obwod()= 0;
 	virtual void print()=0;
-
+	virtual void name() = 0;
 };
+
 

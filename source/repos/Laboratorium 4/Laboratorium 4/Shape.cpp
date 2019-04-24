@@ -2,3 +2,4 @@
 #include "Shape.h"
 
 
+int Shapes::count = 0;

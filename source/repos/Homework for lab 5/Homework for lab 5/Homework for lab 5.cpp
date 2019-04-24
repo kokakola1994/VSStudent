@@ -21,32 +21,34 @@ int main()
 	}
 	for (int i = 0; i < 6; i++) //elementy-potomnymi przez trzy
 	{
-		if (i % 2 == 0) arr[i] = new Rectangle(1 + rand() % NUM, 1 + rand() % NUM);
-		else if (i % 2 == 1) arr[i] = new Diamond(1 + rand() % NUM, 1 + rand() % NUM);
+		if (i % 2 == 0) arr[i] = new Rectangle(1 + rand() % MAX, 1 + rand() % MAX);
+		else if (i % 2 == 1) arr[i] = new Diamond(1 + rand() % MAX, 1 + rand() % MAX);
 		arr[i]->print();
 		arr[i]->area();
 		arr[i]->obwod();
 	}
 	for (int i = 0; i < MAX; i++)
 		if (arr[i]) delete arr[i];
-	Quadrangle *quad = new Rectangle(1 + rand() % NUM, 1 + rand() % NUM);
+	Quadrangle *quad = new Rectangle(1 + rand() % MAX, 1 + rand() % MAX);
 	if (Rectangle*rec = dynamic_cast<Rectangle*>(quad))
 	{
-		cout << "Dynamic_cast Rectangle" << endl;
+		cout << "Dynamic_cast Rectangle " << endl;
+		typeid(&rec);
 	}
 	else
 	{
-		cout << "Dynamic_cast other object" << endl;
+		cout << "Dynamic_cast other object " << endl;
 	}
 
-	quad = new Diamond(1 + rand() % NUM, 1 + rand() % NUM);
+	quad = new Diamond(1 + rand() % MAX, 1 + rand() % MAX);
 	if (Diamond*dim = dynamic_cast<Diamond*>(quad))
 	{
-		cout << "Dynamic_cast Diamond" << endl;
+		cout << "Dynamic_cast Diamond " << endl;
+		typeid(&dim);
 	}
 	else
 	{
-		cout << "Dynamic_cast other object" << endl;
+		cout << "Dynamic_cast other object " << endl;
 	}
 
 	system("pause");

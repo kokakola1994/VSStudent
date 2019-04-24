@@ -7,13 +7,57 @@
 #include "Circle.h"
 #include "Rectangle.h"
 #include "Triangle.h"
-#define MAX 10
+#include <Windows.h>
+#include "Triangle_Storable.h"
+#include "Circle_Storable.h"
+//#define MAX 10
 
 using namespace std;
 
 int main()
 {
-	Shape *arr[MAX];
+	HWND hwnd = GetConsoleWindow(); HDC hdc = GetDC(hwnd);
+		Shape * shape[10];
+	int r = 1;
+	cout << "Mode: 1 - Write, 2-Read" << endl;
+	cin >> r;
+	try
+	{
+		if (r == 2)
+		{
+			shape[0] = new Circle_Storable("c1.txt", Storable::READ);
+			shape[1] = new Triangle_Storable("t1.txt", Storable::READ);
+		}
+		else
+		{
+			shape[0] = new Circle_Storable("c1.txt", Storable::WRITE, 100, 100, 30);
+			shape[1] = new Triangle_Storable("t1.txt", Storable::WRITE, 10, 10, 20, 100, 50, 120);
+		}
+	}
+	catch (const char *s)
+	{
+		printf("imposible to open file'%s'\n", s); system("pause");
+		return 1;
+	}
+	for (int i = 0; i < Shape::GetCount(); i++)
+		if (r == 2)
+		{
+			dynamic_cast<Storable*>(shape[i])->Read();
+		}
+		else
+		{
+			dynamic_cast<Storable*>(shape[i])->Write();
+		}
+	system("cls");
+	for (int i = 0; i < Shape::GetCount(); i++)
+		shape[i]->Draw(hwnd, hdc);
+	system("pause");
+	system("cls");
+	for (int i = 0; i < Shape::GetCount() : i++)
+		delete shape[i];
+	return 0;
+}
+	/*Shape *arr[MAX];
 	for (int i = 0; i < MAX; i++)
 	{
 		arr[i] = NULL;
@@ -29,6 +73,7 @@ int main()
 	}
 	for (int i = 0; i < MAX; i++)
 		if (arr[i]) delete arr[i];
+		*/
 	system("pause");
 	return 0;
 }

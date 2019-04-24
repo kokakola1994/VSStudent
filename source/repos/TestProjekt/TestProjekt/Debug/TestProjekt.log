@@ -1,3 +1,0 @@
-﻿  TestProjekt.cpp
-c:\users\zaboh\source\repos\testprojekt\testprojekt\testprojekt.cpp(53): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  TestProjekt.vcxproj -> C:\Users\zaboh\source\repos\TestProjekt\Debug\TestProjekt.exe
