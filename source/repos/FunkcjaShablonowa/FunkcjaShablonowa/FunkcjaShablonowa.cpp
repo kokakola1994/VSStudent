@@ -20,6 +20,7 @@ void printArray(const T*array, int count)
 		for (size_t i = 0; i < N; i++)
 			arr[i] *= t;
 	}
+
 	template < typename RT = double, typename T = int >
 	struct func
 	{
