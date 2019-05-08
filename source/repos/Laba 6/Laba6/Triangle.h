@@ -1,13 +1,72 @@
 #pragma once
 #include "Shape.h"
-class Triangle :
-	public Shape
+class Triangle : public Shape
+
 {
+
 protected:
-	int x1, y1, x2, y2, x3, y3;
+
+	double z;
+
 public:
-	Triangle(int x1 = 0, int y1 = 0, int x2 = 100, int y2 = 100, int x3 = 150, int y3 = 150);
-	~Triangle() {};
-	void Draw(HWND &hwnd, HDC &hdc);
+
+	Triangle(double ix, double iy, double iz = 0) : Shape(ix, iy)
+
+	{
+
+		z = iz;
+
+	}
+
+
+
+	~Triangle()
+
+	{
+
+		std::cout << "Deleting Triangle\n";
+
+	}
+
+	void print()
+
+	{
+
+		std::cout << " A triangle with sides " << x << " and " << y << " and " << z << "\n";
+
+	}
+
+
+
+	unsigned type() const
+
+	{
+
+		return 1;
+
+	}
+
+
+
+	virtual void store(std::ofstream& s)
+
+	{
+
+		Shape::store(s);
+
+		s << z << std::endl;
+
+	}
+
+	virtual void load(std::ifstream& s)
+
+	{
+
+		Shape::load(s);
+
+		s >> z;
+
+	}
+
 };
 

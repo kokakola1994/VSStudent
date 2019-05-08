@@ -14,5 +14,5 @@ public:
 	virtual ~Storable(); 
 	virtual int Read() = 0;
 	virtual int Write() = 0;
-};
 
+};

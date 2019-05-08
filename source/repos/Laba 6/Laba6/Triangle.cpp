@@ -11,3 +11,6 @@ void Triangle::Draw(HWND &hwnd, HDC &hdc) {
 	HRGN rgnTr = CreatePolygonRgn(T, 3, WINDING);
 	FillRgn(hdc, rgnTr, CreateSolidBrush(RGB(255, 0, 0)));
 }
+
+
+

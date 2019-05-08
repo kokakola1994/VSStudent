@@ -2,14 +2,18 @@
 //
 
 #include <iostream>
-
 #include <fstream>
-
 #include <conio.h>
-
 #include <math.h>
-
-
+#include "Shape.h"
+#include "Triangle.h"
+#include "Rectangle.h"
+#include "Circle.h"
+#include"pch.h"
+#include "Circle.cpp"
+#include"Shape.cpp"
+#include"Rectangle.cpp"
+#include "Triangle.cpp"
 
 #ifndef MAX
 
@@ -17,7 +21,9 @@
 
 #endif
 
-void clear(Shape *arr[])
+using namespace std;
+
+void clear(Shape* arr[])
 
 {
 
@@ -33,7 +39,7 @@ void clear(Shape *arr[])
 
 }
 
-void store(std::ofstream& s, Shape *arr[])
+void store(std::ofstream& s, Shape* arr[])
 
 {
 
@@ -59,7 +65,7 @@ void store(std::ofstream& s, Shape *arr[])
 
 }
 
-int load(std::ifstream& s, Shape *arr[])
+int load(std::ifstream& s, Shape* arr[])
 
 {
 	clear(arr);
@@ -96,9 +102,6 @@ int load(std::ifstream& s, Shape *arr[])
 
 }
 
-
-
-
 int main()
 
 {
@@ -121,7 +124,7 @@ int main()
 
 	{
 
-		std::cout
+		cout
 
 			<< " <1> - Add triangle \n"
 
@@ -139,7 +142,7 @@ int main()
 
 			<< " <8> - Exit \n";
 
-		std::cin >> ch;       //  menu
+		cin >> ch;       //  menu
 
 		switch (ch)
 
@@ -147,9 +150,9 @@ int main()
 
 		case 1:
 
-			std::cout << "Enter the number of new triangle - \n";
+			cout << "Enter the number of new triangle - \n";
 
-			std::cin >> j;
+			cin >> j;
 
 			for (int i = count; i < count + j; i++)
 
@@ -169,9 +172,9 @@ int main()
 
 		case 2:
 
-			std::cout << "Enter the number of new rectangle - \n";
+			cout << "Enter the number of new rectangle - \n";
 
-			std::cin >> j;
+			cin >> j;
 
 			for (int i = count; i < count + j; i++)
 
@@ -189,9 +192,9 @@ int main()
 
 		case 3:
 
-			std::cout << "Enter the number of new circle - \n";
+			cout << "Enter the number of new circle - \n";
 
-			std::cin >> j;
+			cin >> j;
 
 			for (int i = count; i < count + j; i++)
 

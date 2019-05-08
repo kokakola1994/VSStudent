@@ -14,7 +14,7 @@
 # define MAX 100
 
 #endif
-
+using namespace std;
 class Shape
 
 {
