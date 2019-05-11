@@ -5,27 +5,78 @@
 #include <new>
 #include <algorithm>
 using namespace std;
-
-template <typename T>
+//funkcja wyswietlenia dowolnej tablicy
+template <typename T> 
 void printArray(const T* array, int count)
 {
-	static_assert (is_pod<T>::value, "type T mucie byc prostym");
+	static_assert(std::is_pod<T>::value, "typ T musi byc prostym.");
+
 	for (int ix = 0; ix < count; ix++)
 		cout << array[ix] << " ";
 	cout << endl;
-	template < typename T = int>
-	void F(T * arr, size_t N = 10, T t = T(5))
+}
+template<typename T = int>
+//zad1. wariant1. przyklad sparametryzowanej funkcji
+void F(T * arr, size_t N = 10, T t = T(5))
+{
+	for (size_t i = 0; i < N; i++)
+		arr[i] *= t;
+}
+//za1. wariant2. dwa funktory
+template<typename RT = double, typename T = int>
+struct func
+{
+	RT operator()(const T& a, const T& t)
 	{
-		for (size_t i = 0; i < N; i++)
-			arr[i] *= t;
+		return(RT)a / t;
 	}
+};
 
-
+template<typename RT = double, typename T = int>
+struct func2
+{
+	RT operator()(const T& a, const T& t)
+	{
+		return(RT)a* t;
+	}
+};
+template<typename RT = double, typename T = int, class Func = func<RT, T>>
+RT SetGeometr(T* arr, std::size_t N = 10, T t = T(5), Func f = func < RT, T>())
+{
+	RT res = 0;
+	for (std::size_t i = 0; i < N; i++)
+		res += f(arr[i], t);
+	return pow(abs(res), 1.0 / N);
 }
 
+//zad2. funktor i uogolniony algorytm
+template<class T>
+class Positive
+{
+public:
+	bool operator()(const T& t)
+	{
+		return bool(t > T(0));
+	}
+};
+template<class InputIterator, class OutputIterator, class Pridicate>
+void reverse_copy_if(InputIterator first, InputIterator last, OutputIterator result, Pridicate Functor)
+{
+	for (; last >= first; last--)
+		if (Functor(*last))
+		{
+			*result = *last; result++;
+		}
+}
 int main()
 {
-
+	int iArray[10];
+	for(int i = 0; i < 10; i++)
+	{
+		iArray[i] = 1 + rand() % 10;
+		cout << iArray[i];
+	}
+	cout << iArray[5];
 }
 
 //template <class T>
