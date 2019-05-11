@@ -33,7 +33,7 @@ void Book::Inputbook(void)
 	cout << "Wprowadz rok publikacji:\n";
 	cin >> nyear;
 	cout << "Wpisz authora ksinzki:" << endl;
-	getline(cin, author);
+	getline(cin, nauthor);
 	cout << "Wprowadz kod ksianzki\n";
 	cin >> ncode;
 	Settitle(ntittle);

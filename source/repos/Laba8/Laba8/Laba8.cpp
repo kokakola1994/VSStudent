@@ -2,10 +2,16 @@
 //
 
 #include <iostream>
+#include "Book.h"
+
 using namespace std;
 
 int main()
 {
+	Book a(100, 2000, "Alex Duma", "Trzej muszketerowe"), b;
+	a.Printbook();
+	b.Inputbook();
+	b.Printbook();
 
 	system("pause");
 }

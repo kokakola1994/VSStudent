@@ -151,10 +151,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Biblio.cpp" />
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Laba8.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Biblio.h" />
     <ClInclude Include="Book.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
