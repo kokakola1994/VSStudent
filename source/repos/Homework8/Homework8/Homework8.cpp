@@ -22,7 +22,7 @@ void printArray(const T* array, int count)
 }
 template<typename T = int>
 //zad1. wariant1. przyklad sparametryzowanej funkcji
-void F(T * arr, size_t N = 10, T t = T(5))
+void F(T * arr, size_t N = 10, T t = T(1))
 {
 	for (size_t i = 0; i < N; i++)
 		arr[i] *= t;
@@ -33,7 +33,7 @@ struct func
 {
 	RT operator()(const T& a, const T& t)
 	{
-		return(RT)a - t;
+		return(RT)a / t;
 	}
 };
 
@@ -82,7 +82,8 @@ int main()
 	cout << "\nTablica typu int:\n"; printArray(iArray, sizeof(iArray) / sizeof(int));
 	//wywolanie z parametrami
 	F(dArray); 
-	cout << "\nTablica typu double:\n"; printArray(dArray, sizeof(dArray) / sizeof(double));
+	cout << "\nTablica typu double:\n"; printArray(dArray, sizeof(dArray) / sizeof(double));	
+	
 	/*for(int i = 0; i < 10; i++)
 	{
 		iArray[i] = i + 10;
@@ -105,9 +106,9 @@ int main()
 	printArray(res, 10);
 
 	//zad2. funktor i uogolniony algorytm
-	double res2[7] = { 0.0 };
-	reverse_copy_if(dArray, dArray + 7, res2, Positive<double>());
-	printArray(res2, 7);
+	double res2[10] = { 0.0 };
+	reverse_copy_if(dArray, dArray + 10, res2, Positive<double>());
+	printArray(res2, 10);
 
 	system("pause");
 	return 0;
