@@ -9,6 +9,7 @@ public:
 	unsigned GetN()const { return n; };
 	void Printall() const;
 	void AddBook();
+	
 	void Sort(bool(*cmp)(Book&, Book&));
 	Book& operator[](const unsigned& index);
 	const Book& operator[](const unsigned& index) const;

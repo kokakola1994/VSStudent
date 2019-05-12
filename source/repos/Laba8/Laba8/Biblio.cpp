@@ -1,4 +1,6 @@
 #include "Biblio.h"
+#pragma
+#include "Book.h"
 
 
 unsigned Biblio::n = 0;
@@ -55,15 +57,20 @@ void Biblio::AddBook()
 	f[n].Inputbook;
 	n++;
 }
+
 bool Biblio::Dell(unsigned j)
 {
 	if (n == 0) { cout << "Ksianzek niema...."; return false; }
-	esle
-	{
-		for (unsigned i = j; i < n; i++)
-		f[i] = f[i + 1];
-	n--;
-	return true;
+	else {
+		;
+		if (j >= n) { cout << "Nedijsnij nomer..."; system("pause"); return false; }
+		else
+		{
+			for (unsigned i = j; i < n; i++)
+				f[i] = f[i + 1];
+			n--;
+			return true;
+		}
 	}
 }
 Book& Biblio::operator[](const unsigned& index)

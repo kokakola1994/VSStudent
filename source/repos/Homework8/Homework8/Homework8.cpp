@@ -4,7 +4,12 @@
 #include <iostream>
 #include <new>
 #include <algorithm>
+#include <iomanip>
+#include <math.h>
+#include <algorithm>
+#include <vector>
 using namespace std;
+using std::setw;
 //funkcja wyswietlenia dowolnej tablicy
 template <typename T> 
 void printArray(const T* array, int count)
@@ -28,7 +33,7 @@ struct func
 {
 	RT operator()(const T& a, const T& t)
 	{
-		return(RT)a / t;
+		return(RT)a - t;
 	}
 };
 
@@ -46,7 +51,7 @@ RT SetGeometr(T* arr, std::size_t N = 10, T t = T(5), Func f = func < RT, T>())
 	RT res = 0;
 	for (std::size_t i = 0; i < N; i++)
 		res += f(arr[i], t);
-	return pow(abs(res), 1.0 / N);
+	return log10(abs(res)); //logarythm 
 }
 
 //zad2. funktor i uogolniony algorytm
@@ -70,13 +75,42 @@ void reverse_copy_if(InputIterator first, InputIterator last, OutputIterator res
 }
 int main()
 {
-	int iArray[10];
-	for(int i = 0; i < 10; i++)
+	int iArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	double dArray[10] = { 1.1,2.3,3.3,4.4,5.5,6.6,7.7,8.8,9.9,10.1 };
+	//wywolanie z ustawieniami domyslnymi
+	F(iArray);
+	cout << "\nTablica typu int:\n"; printArray(iArray, sizeof(iArray) / sizeof(int));
+	//wywolanie z parametrami
+	F(dArray); 
+	cout << "\nTablica typu double:\n"; printArray(dArray, sizeof(dArray) / sizeof(double));
+	/*for(int i = 0; i < 10; i++)
 	{
-		iArray[i] = 1 + rand() % 10;
-		cout << iArray[i];
+		iArray[i] = i + 10;
 	}
-	cout << iArray[5];
+	for (int j = 0; j < 10; j++) {
+		cout << setw(7) << j << setw(13) << iArray[j] << endl;
+	}*/
+	//zad1.wariant2. przyklad sparametyrowaznej funkcji, ktora wykonuje dzialanie
+	//na dowlonej tablicy i zwraca liczbe dowolnego typu
+
+	//wywoalnie z ustawieniami domyslnymi
+	cout << "\ndomyslnie, func:\n" << SetGeometr(iArray) << endl;
+	//wywolanie z prametrami i funktorem fun2
+	cout << "\nfunc2:\n" << SetGeometr<double, double, func2<double,
+		double>>(dArray, sizeof(dArray) / sizeof(double), 12.0, func2<double, double>()) << endl;
+
+	//zad2. funktor i uogolniony algorytm
+	int res[10] = { 0 };
+	reverse_copy_if(iArray, iArray + 10, res, Positive<int>());
+	printArray(res, 10);
+
+	//zad2. funktor i uogolniony algorytm
+	double res2[7] = { 0.0 };
+	reverse_copy_if(dArray, dArray + 7, res2, Positive<double>());
+	printArray(res2, 7);
+
+	system("pause");
+	return 0;
 }
 
 //template <class T>
