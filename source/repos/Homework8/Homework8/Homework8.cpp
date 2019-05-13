@@ -46,7 +46,7 @@ struct func2
 	}
 };
 template<typename RT = double, typename T = int, class Func = func<RT, T>>
-RT SetGeometr(T* arr, std::size_t N = 10, T t = T(5), Func f = func < RT, T>())
+RT SetGeometr(T* arr, std::size_t N = 10, T t = T(1), Func f = func < RT, T>())
 {
 	RT res = 0;
 	for (std::size_t i = 0; i < N; i++)
@@ -54,7 +54,16 @@ RT SetGeometr(T* arr, std::size_t N = 10, T t = T(5), Func f = func < RT, T>())
 	return log10(abs(res)); //logarythm 
 }
 
-//zad2. funktor i uogolniony algorytm
+//zad2. funktor i uogolniony algorytm										//merge array template
+template<class Container>
+Container add(Container const& v1, Container const& v2) {
+	Container retval;
+	std::copy(v1.begin(), v1.end(), std::back_inserter(retval));
+	std::copy(v2.begin(), v2.end(), std::back_inserter(retval));
+	return retval;
+}
+//merge array template
+
 template<class T>
 class Positive
 {
@@ -77,13 +86,13 @@ int main()
 {
 	int iArray[10] = { 1,2,3,4,5,6,7,8,9,10 };
 	double dArray[10] = { 1.1,2.3,3.3,4.4,5.5,6.6,7.7,8.8,9.9,10.1 };
+	
 	//wywolanie z ustawieniami domyslnymi
 	F(iArray);
 	cout << "\nTablica typu int:\n"; printArray(iArray, sizeof(iArray) / sizeof(int));
 	//wywolanie z parametrami
 	F(dArray); 
 	cout << "\nTablica typu double:\n"; printArray(dArray, sizeof(dArray) / sizeof(double));	
-	
 	/*for(int i = 0; i < 10; i++)
 	{
 		iArray[i] = i + 10;
@@ -97,8 +106,8 @@ int main()
 	//wywoalnie z ustawieniami domyslnymi
 	cout << "\ndomyslnie, func:\n" << SetGeometr(iArray) << endl;
 	//wywolanie z prametrami i funktorem fun2
-	cout << "\nfunc2:\n" << SetGeometr<double, double, func2<double,
-		double>>(dArray, sizeof(dArray) / sizeof(double), 12.0, func2<double, double>()) << endl;
+	cout << "\nfunc2:\n" << SetGeometr<double, double,
+		func2<double,double>>(dArray, sizeof(dArray) / sizeof(double), 12.0, func2<double, double>()) << endl;
 
 	//zad2. funktor i uogolniony algorytm
 	int res[10] = { 0 };
