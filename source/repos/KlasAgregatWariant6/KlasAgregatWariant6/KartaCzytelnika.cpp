@@ -22,7 +22,7 @@ void KartaCzytelnika::Printbook()
 	cout << adres;
 	cout.width(30);
 	cout << iin;
-	cout.width(4);
+	cout.width(5);
 	cout << data << endl;
 }
 

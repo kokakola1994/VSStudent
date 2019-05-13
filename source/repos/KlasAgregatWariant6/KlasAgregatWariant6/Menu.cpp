@@ -1,7 +1,6 @@
 #include "Menu.h"
-#include "Menu.h"
 #include "KartaCzytelnika.h"
-
+#include "Library.h"
 
 Menu::~Menu()
 
@@ -25,13 +24,13 @@ void Menu::m()
 
 	cout << " 0.Exit " << endl;
 
-	cout << " 1. Kode " << endl;
+	cout << " 1. Numer czytelnika " << endl;
 
-	cout << " 2. Autor " << endl;
+	cout << " 2. Adres " << endl;
 
-	cout << " 3. Title " << endl;
+	cout << " 3. Imie i Nazwisko " << endl;
 
-	cout << " 4. Year " << endl;
+	cout << " 4. Rok waznosti konta " << endl;
 
 }
 
@@ -49,19 +48,19 @@ void Menu::GeneralMenu(Library& b)
 
 		system("cls");
 
-		cout << " 0.Exit " << endl;
+		cout << " [0] Exit " << endl;
 
-		cout << " 1. Dodaj book " << endl;
+		cout << " [1] Dodaj Czytelnika " << endl;
 
-		cout << " 2. Usun book " << endl;
+		cout << " [2] Usun Czytelnika " << endl;
 
-		cout << " 3. Print " << endl;
+		cout << " [3] Print " << endl;
 
-		cout << " 4. Find " << endl;
+		cout << " [4] Find " << endl;
 
-		cout << " 5. Korekcja polia " << endl;
+		cout << " [5] Korekcja polia " << endl;
 
-		cout << " 6. Sort " << endl;
+		cout << " [6] Sort " << endl;
 
 		cin >> g;
 
@@ -73,7 +72,7 @@ void Menu::GeneralMenu(Library& b)
 
 		case 1: {
 
-			b.AddCzytelnik();
+			b.AddCzytelnik(); 
 
 			break;
 
@@ -83,13 +82,13 @@ void Menu::GeneralMenu(Library& b)
 
 			int j; cin >> j;
 
-			if (b.Dell(j)) { cout << "Blad operacji..."; system("pause"); }
+			if (b.Dell(j)) { cout << "Operacja zakonczona..."; system("pause"); }
 
 			else
 
 			{
 
-				cout << "Operacja zakonczona..." << endl; system("pause");
+				cout << "Blad operacji..." << endl; system("pause");
 
 			}
 
@@ -97,7 +96,7 @@ void Menu::GeneralMenu(Library& b)
 
 		case 3: { if (b.GetN() == 0) {
 
-			cout << "Ksiazek niema..."; system("pause");
+			cout << "Czytelnikow niema..."; system("pause");
 
 			break;
 
@@ -155,7 +154,7 @@ void Menu::MenuCorect(Library& b)
 
 		if (k >= b.GetN()) {
 
-			cout << "Nieprawid?owy numer..."; system("pause");
+			cout << "Nieprawidlowy numer..."; system("pause");
 
 			break;
 
@@ -177,19 +176,19 @@ void Menu::MenuCorect(Library& b)
 
 			case 0: break;
 
-			case 1: {cout << "Wprowadz kod do zastapienia..." << endl; cin >> num; b[k].Setnumer(num);  b.Printall();
+			case 1: {cout << "Wprowadz numer do zastapienia..." << endl; cin >> num; b[k].Setnumer(num);  b.Printall();
 
 				system("pause"); break; }
 
-			case 2: {cout << "Wprowadz autora do zastapienia..." << endl; cin >> name; b[k].Setadres(name);  b.Printall();
+			case 2: {cout << "Wprowadz Adres do zastapienia..." << endl; cin >> name; b[k].Setadres(name);  b.Printall();
 
 				system("pause"); break; }
 
-			case 3: {cout << "Wprowadz title do zastapienia..." << endl; cin >> name; b[k].Setiin(name);  b.Printall();
+			case 3: {cout << "Wprowadz Imie i Nazwisko do zastapienia..." << endl; cin >> name; b[k].Setiin(name);  b.Printall();
 
 				system("pause"); break; }
 
-			case 4: {cout << "Wprowadz rok do zastapienia..." << endl; cin >> num; b[k].Setdata(num);  b.Printall();
+			case 4: {cout << "Wprowadz rok waznosti do zastapienia..." << endl; cin >> num; b[k].Setdata(num);  b.Printall();
 
 				system("pause"); break; }
 
@@ -269,7 +268,7 @@ void Menu::MenuFind(Library& b)
 
 		case 1:
 
-			cout << "Wprowadz kod... ";
+			cout << "Wprowadz numer... ";
 
 			cin >> num;
 
@@ -291,7 +290,7 @@ void Menu::MenuFind(Library& b)
 
 		case 2:
 
-			cout << "Wprowadz autor... ";
+			cout << "Wprowadz adres... ";
 
 			cin >> name;
 
@@ -313,7 +312,7 @@ void Menu::MenuFind(Library& b)
 
 		case 3:
 
-			cout << "Wprowadz title... ";
+			cout << "Wprowadz Imie i Nazwisko... ";
 
 			cin >> name;
 
@@ -335,7 +334,7 @@ void Menu::MenuFind(Library& b)
 
 		case 4:
 
-			cout << "Wprowadz year... ";
+			cout << "Wprowadz rok waznosti... ";
 
 			cin >> num;
 

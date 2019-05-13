@@ -1,21 +1,17 @@
-// KlasAgregatWariant6.cpp : This file contains the 'main' function. Program execution begins and ends there.
+// LearningSolution.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
 #include <iostream>
-#include "KartaCzytelnika.h"
-#include "Library.h"
-#include "Menu.h"
+#include <string>
+//void resize(rsize_t, char znak = '\0'){}
 using namespace std;
-
 int main()
 {
-	KartaCzytelnika a(1, 1988, "George Martin", "los-Angeles"),b(2,1928,"Henryk Senkewycz","Warsawa");
-	Library one;
-	one.AddCzytelnik(a);
-	one.AddCzytelnik(b);
-	Menu m(one);
-	system("pause");
-	return 0;
+	int vall = 45;
+	string to_string(int vall);
+	cout << vall;
+	//resize(100);
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu

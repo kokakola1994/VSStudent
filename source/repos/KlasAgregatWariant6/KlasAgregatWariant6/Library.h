@@ -2,13 +2,18 @@
 #include "KartaCzytelnika.h"
 class Library
 {
-	static const unsigned N = 10;
+	static const unsigned N = 100;
 	static unsigned n;
 	KartaCzytelnika* f;
 public:
 	unsigned GetN()const { return n; };
 	void Printall() const;
 	void AddCzytelnik();
+	void AddCzytelnik(KartaCzytelnika& a) 
+	{
+		f[n].InputCzytelnik();
+		f[n++];
+	};
 
 	void Sort(bool(*cmp)(KartaCzytelnika&, KartaCzytelnika&));
 	KartaCzytelnika& operator[](const unsigned& index);

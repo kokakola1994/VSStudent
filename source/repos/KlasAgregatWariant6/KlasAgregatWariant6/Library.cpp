@@ -16,20 +16,20 @@ Library::~Library()
 }
 void Library::Printall() const
 {
-	cout << "=========================================" << endl;
+	cout << "==================================================================================" << endl;
 	cout.setf(ios::left);
-	cout.width(5);
+	cout.width(20);
 	cout << "Numer";
-	cout.width(15);
+	cout.width(20);
 	cout << "Adres";
-	cout.width(30);
+	cout.width(20);
 	cout << "IiN";
-	cout.width(4);
+	cout.width(20);
 	cout << "Data" << endl;
-	cout << "=========================================" << endl;
+	cout << "==================================================================================" << endl;
 	for (unsigned i = 0; i < n; i++)
 		f[i].Printbook();
-	cout << "=========================================" << endl;
+	cout << "==================================================================================" << endl;
 
 }
 
@@ -51,8 +51,10 @@ void Library::Sort(bool(*cmp)(KartaCzytelnika&, KartaCzytelnika&))
 		}
 	}
 }
+
 void Library::AddCzytelnik()
 {
+	
 	f[n].InputCzytelnik();
 	n++;
 }
