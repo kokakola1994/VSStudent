@@ -9,7 +9,7 @@ using namespace std;
 
 int main()
 {
-	KartaCzytelnika a(1, 1988, "George Martin", "los-Angeles"),b(2,1928,"Henryk Senkewycz","Warsawa");
+	KartaCzytelnika a(1, 2030, "George Martin", "los-Angeles"),b(2,2015,"G.G Martin","London");
 	Library one;
 	one.AddCzytelnik(a);
 	one.AddCzytelnik(b);

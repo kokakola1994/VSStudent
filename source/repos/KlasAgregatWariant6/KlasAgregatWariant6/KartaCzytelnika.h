@@ -21,6 +21,6 @@ public:
 	string Getadres()const { return adres; };
 	void Setiin(string iin) { this->iin = iin; };
 	string Getiin() const { return iin; };
-	void Printbook();
+	void Printczytelnik();
 	void InputCzytelnik();
 };

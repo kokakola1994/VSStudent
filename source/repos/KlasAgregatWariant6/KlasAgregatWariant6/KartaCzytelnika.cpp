@@ -13,7 +13,7 @@ KartaCzytelnika::~KartaCzytelnika()
 {
 	}
 
-void KartaCzytelnika::Printbook()
+void KartaCzytelnika::Printczytelnik()
 {
 	cout.setf(ios::left);
 	cout.width(5);
@@ -22,7 +22,7 @@ void KartaCzytelnika::Printbook()
 	cout << adres;
 	cout.width(30);
 	cout << iin;
-	cout.width(5);
+	cout.width(10);
 	cout << data << endl;
 }
 

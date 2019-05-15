@@ -134,7 +134,7 @@ void Menu::MenuCorect(Library& b)
 
 	int g = 1;
 
-	unsigned      k = 0;
+	unsigned k = 0;
 
 	int num = 0;
 
@@ -164,7 +164,7 @@ void Menu::MenuCorect(Library& b)
 
 		{
 
-			b[k].Printbook();
+			b[k].Printczytelnik();
 
 			cout << "Wprowadz numer pola do zastapienia..." << endl;
 
@@ -278,7 +278,7 @@ void Menu::MenuFind(Library& b)
 
 				if (b[i].Getnumer() == num) {
 
-					b[i].Printbook(); flag = false;
+					b[i].Printczytelnik(); flag = false;
 
 				}
 
@@ -300,7 +300,7 @@ void Menu::MenuFind(Library& b)
 
 				if (b[i].Getadres() == name) {
 
-					b[i].Printbook(); flag = false;
+					b[i].Printczytelnik(); flag = false;
 
 				}
 
@@ -322,7 +322,7 @@ void Menu::MenuFind(Library& b)
 
 				if (b[i].Getiin() == name) {
 
-					b[i].Printbook(); flag = false;
+					b[i].Printczytelnik(); flag = false;
 
 				}
 
@@ -344,7 +344,7 @@ void Menu::MenuFind(Library& b)
 
 				if (b[i].Getdata() == num) {
 
-					b[i].Printbook(); flag = false;
+					b[i].Printczytelnik(); flag = false;
 
 				}
 
