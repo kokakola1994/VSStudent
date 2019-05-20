@@ -2,7 +2,8 @@
 //
 
 #include <iostream>
-
+#include <string>
+using namespace std;
 class Stack;
 class StackEmpty
 {
@@ -69,6 +70,7 @@ int Stack::Pop()
 		throw StackEmpty(this);
 }
 
+
 int main()
 {
 	Stack s;
@@ -83,7 +85,7 @@ int main()
 	}
 		catch (StackFull s)
 		{
-			printf("Attempt to put value %d to the full stack at the adress %p \n");
+			printf("Attempt to put value %d to the full stack at the adress %p \n", s.GetValue(),s.GetPtr());
 		}
 		try
 		{
