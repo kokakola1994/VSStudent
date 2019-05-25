@@ -18,23 +18,24 @@ void calSumGP(float b, float q, int n)
 		<< sum << endl;
 }
 
-
 int main()
 {
 	int n;
 	float b, q;
-
-		cout << "Enter the value of b = ";
-		cin >> b;
-		try {
-			cout << "Enter the value of q = ";
-			cin >> q;
-		}
-		catch (float q)
-		{
-			q != 1;
-			cout << "An exception occurred.Exception Nr. " << q << endl;
-		}
+			try {
+				cout << "Enter the value of b = ";
+				cin >> b;
+				if (b != 1) 
+					throw b;
+					cout << "An exception occurred. b cant be 1:  " << endl;
+					return 0;
+			}
+			catch (float b)
+			{
+			}
+	
+		cout << "Enter the value of q = ";
+		cin >> q;
 		cout << "Enter the value of n = ";
 		cin >> n;
 
@@ -52,3 +53,4 @@ int main()
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
