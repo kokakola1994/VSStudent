@@ -6,40 +6,39 @@
 
 using namespace std;
 
-void calSumGP(float b, float q, int n)
+float calSumGP(float b, float q, int n)
 {
-	float sum = 0, temp = b;
-	for (int i = 1; i < n; i++)
-	{
-		sum = sum + temp;
-		temp = temp * q;
-	}
-	cout << "Sum of geometric progression : "
-		<< sum << endl;
+	return (b * (1 - pow(q, n))) / (1 - q);
 }
+class MyException {
+
+	float b, q;
+	int n;
+public:
+	float sum, temp;
+};	
+
 
 int main()
 {
 	int n;
 	float b, q;
-			try {
-				cout << "Enter the value of b = ";
-				cin >> b;
-				if (b != 1) 
-					throw b;
-					cout << "An exception occurred. b cant be 1:  " << endl;
-					return 0;
-			}
-			catch (float b)
-			{
-			}
-	
+		cout << "Enter the value of b = ";
+		cin >> b;	
 		cout << "Enter the value of q = ";
-		cin >> q;
+		try {
+			cin >> q;
+			if (q != 1)
+				throw q;
+			cout << "An exception occurred. q cant be 1:  " << endl;
+			return 0;
+		}
+		catch(float q)
+		{}
 		cout << "Enter the value of n = ";
 		cin >> n;
 
-		calSumGP(b, q, n);
+		cout << "Sum of geometric progression : " << calSumGP(b, q, n) << endl;
 		system("pause");
 }
 
