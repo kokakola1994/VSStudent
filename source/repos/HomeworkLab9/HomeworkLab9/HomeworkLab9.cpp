@@ -10,13 +10,34 @@ float calSumGP(float b, float q, int n)
 {
 	return (b * (1 - pow(q, n))) / (1 - q);
 }
-class MyException {
-
+class euqals
+{
+private:
 	float b, q;
 	int n;
 public:
-	float sum, temp;
-};	
+	float cals(float b, float q, int n)
+	{
+		return (b * (1 - pow(q, n))) / (1 - q);
+	}
+	float excep(float q);
+};
+float euqals::excep(float q)
+{
+	if (q != 1)
+		cout << "exception q!=1" << endl;
+	return q!=1;
+}
+class myexception
+{
+private:
+	euqals* euqal;
+public:
+	myexception(euqals* q) :euqal(q){}
+	euqals* Getexcep() {
+		return euqal;
+	}
+};
 
 
 int main()
@@ -31,13 +52,21 @@ int main()
 			if (q != 1)
 				throw q;
 			cout << "An exception occurred. q cant be 1:  " << endl;
-			return 0;
 		}
-		catch(float q)
-		{}
+		catch(myexception q)
+		{
+			printf("An exception q=1 %d  %p \n", q.Getexcep());
+		}
+		/*try {
+			cout << "Enter the value of q = ";
+			cin >> q;
+		}
+		catch (myexception q)
+		{
+			printf("An exception q=1 %d  %p \n", q.Getexcep());
+		}*/
 		cout << "Enter the value of n = ";
 		cin >> n;
-
 		cout << "Sum of geometric progression : " << calSumGP(b, q, n) << endl;
 		system("pause");
 }
@@ -52,4 +81,5 @@ int main()
 //   4. Use the Error List window to view errors
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+
 

@@ -20,20 +20,21 @@ void printArray(const T* array, int count)
 template <typename T1, typename T2>
 void Logarythm(const T1* iArray, const T2* dArray, int size) {
 	for (int i = 0; i < size; i++)
-		cout << "| " << "|" << iArray[i] << " - log10(" << dArray[i] << ")| | ";
+		cout << " | " << " << " << iArray[i] << " - log10(" << dArray[i] << ")>> | ";
 	cout << "\n\n";
 
 	for (int i = 0; i < size; i++)
-		cout << "| " << log10(iArray[i] - log10(dArray[i])) << " | ";
+		cout << "[ " << log10(iArray[i] - log10(dArray[i])) << " ] ";
 	cout << "\n\n";
 }
 //zad1. wariant1. przyklad sparametryzowanej funkcji
 template<typename T = int>
-void F(T* arr, size_t N = 10, T t = T(5))
+void F(T* arr, size_t N = 10, T t = T(2))
 {
 	for (size_t i = 0; i < N; i++)
 		arr[i] *= t;
 }
+//merge sort
 template<typename I, typename BI>
 void mergeTogether(I begin, I mid, I end, BI beginBuffer)
 {
@@ -182,7 +183,7 @@ int main()
 	cout << "First array(int)    : ";	printArray(iArray, sizeof(iArray) / sizeof(int));
 	cout << "Second array(double): "; printArray(dArray, sizeof(dArray) / sizeof(double));
 	cout << "Fisrt Array[x] - Second Array[x]: "; Logarythm(iArray, dArray, sizeof(iArray) / sizeof(int));
-	vector<int> a = { 3, 0, 7, 5, 7, 8, 3, 1 };
+	cout << "Merge and sort template function: " << endl;
 	mergeSort(begin(iArray), end(iArray));
 	copy(begin(iArray), end(iArray),
 		ostream_iterator<int>(cout, ", "));
