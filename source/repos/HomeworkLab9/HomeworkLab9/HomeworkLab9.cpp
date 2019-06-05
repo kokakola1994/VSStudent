@@ -8,36 +8,20 @@ using namespace std;
 
 float calSumGP(float b, float q, int n)
 {
-	return (b * (1 - pow(q, n))) / (1 - q);
-}
-class euqals
-{
-private:
-	float b, q;
-	int n;
-public:
-	float cals(float b, float q, int n)
+	float sum;
+	sum = (b * (1 - pow(q, n))) / (1 - q);
+	try {
+		if (q != 1)
+			throw q;
+		cout << "An exception occurred. q cant be 1:  " << endl;
+		return 0;
+	}
+	catch (float q)
 	{
-		return (b * (1 - pow(q, n))) / (1 - q);
+		
 	}
-	float excep(float q);
-};
-float euqals::excep(float q)
-{
-	if (q != 1)
-		cout << "exception q!=1" << endl;
-	return q!=1;
+	return sum;
 }
-class myexception
-{
-private:
-	euqals* euqal;
-public:
-	myexception(euqals* q) :euqal(q){}
-	euqals* Getexcep() {
-		return euqal;
-	}
-};
 
 
 int main()
@@ -47,24 +31,7 @@ int main()
 		cout << "Enter the value of b = ";
 		cin >> b;	
 		cout << "Enter the value of q = ";
-		try {
-			cin >> q;
-			if (q != 1)
-				throw q;
-			cout << "An exception occurred. q cant be 1:  " << endl;
-		}
-		catch(myexception q)
-		{
-			printf("An exception q=1 %d  %p \n", q.Getexcep());
-		}
-		/*try {
-			cout << "Enter the value of q = ";
-			cin >> q;
-		}
-		catch (myexception q)
-		{
-			printf("An exception q=1 %d  %p \n", q.Getexcep());
-		}*/
+		cin >> q;
 		cout << "Enter the value of n = ";
 		cin >> n;
 		cout << "Sum of geometric progression : " << calSumGP(b, q, n) << endl;
