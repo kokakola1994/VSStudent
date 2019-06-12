@@ -66,9 +66,7 @@ public:
 		~Iterator() {}
 
 		Item* get_pos() { return pos; }
-
 		void set_pos(Item* it) { pos = it; }
-
 		bool operator == (const Iterator& it) const
 
 		{
@@ -306,29 +304,30 @@ public:
 
 
 int main() {
-
+	vector<int> myvector;
+	for (unsigned i = 1; i < 15; i++) myvector.push_back(i);
 	List <Pair<double>>L00;
 
 	for (unsigned i = 0; i < 5; i++)
 
 		L00.push_back(Pair<double>(i / 10.0, i / 100.0));
-
+	
 	cout << L00;
-
 	List<int> L1;
 
 	for (unsigned i = 0; i < 15; i++)
 
 		L1.push_back(i);
-
-	cout << L1;
+		cout << L1;
 
 	List<int>::Iterator b = L1.begin(), e = L1.end();
-
-	List<int> L2(b, e);
-
+	List<int> L2(b, e);	
 	cout << L2;
-	
+	std::reverse(myvector.begin(), myvector.end());
+	cout << "function reverse:";
+	for (vector<int>::iterator it = myvector.begin(); it != myvector.end(); ++it)
+		cout << ' ' << *it;
+	cout << '\n';
 
 }
 
@@ -343,4 +342,11 @@ int main() {
 //   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
 //   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
 
-
+template<class reverseIterator>
+void reverse(reverseIterator first, reverseIterator last)
+{
+	while ((first != last) && (first != --last)) {
+		iter_swap(first, last);
+		++first;
+	}
+}
