@@ -3,15 +3,41 @@
 
 #include <iostream>
 #include <string>
-//void resize(rsize_t, char znak = '\0'){}
+#include <vector>
 using namespace std;
+class Bazowa {
+public:
+	Bazowa() { f1(); };
+	virtual void f1() { cout << "f1 bazowa" << endl; };
+	void f2() { cout << "f2 bazowa" << endl; };
+};
+class A : public Bazowa {
+public:
+	A() { f1(); }
+	void f1() { cout << "f1 A" << endl; };
+	virtual void f2() { cout << "f2 A" << endl; };
+};
+class B : public A {
+public:
+	B() { f1(); };
+	void f1() { cout << "f1 B" << endl; };
+	void f2() { cout << "f2 B" << endl; };
+};
+class C : private Bazowa {
+public:
+	C() { f1(); };
+	void f1() { cout << "f1 C" << endl; };
+	void f2() { cout << "f2 C" << endl; };
+};
+class D :public B {
+public:
+	D() { f2(); };
+	virtual void f3() { cout << "f3 D" << endl; }
+};
 int main()
-{
-	int vall = 45;
-	string to_string(int vall);
-	cout << vall;
-	//resize(100);
-
+ {
+	C c;
+	c.f2();
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
