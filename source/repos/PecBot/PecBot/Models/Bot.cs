@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Telegram.Bot;
 using PecBot.Models.Commands;
@@ -21,6 +18,7 @@ namespace PecBot.Models
             }
             commandsList = new List<Command>();
             commandsList.Add(new PecCommand());
+            commandsList.Add(new Peccom());
             client = new TelegramBotClient(AppSettings.Key);
             var hook = string.Format(AppSettings.Url, "api/message/update/");
             await client.SetWebhookAsync(hook);

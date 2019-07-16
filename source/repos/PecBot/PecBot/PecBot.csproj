@@ -139,6 +139,7 @@
     <Compile Include="Models\AppSettings.cs" />
     <Compile Include="Models\Bot.cs" />
     <Compile Include="Models\Commands\Command.cs" />
+    <Compile Include="Models\Commands\Peccom.cs" />
     <Compile Include="Models\Commands\PecCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -158,6 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="Properties\PublishProfiles\PecBot20190709 - Web Deploy.pubxml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace PecBot.Models
+﻿namespace PecBot.Models
 {
     public static class AppSettings
     {
