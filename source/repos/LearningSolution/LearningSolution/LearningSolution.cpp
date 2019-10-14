@@ -38,6 +38,19 @@ int main()
  {
 	C c;
 	c.f2();
+	for (int i = 1; i <= 10; i++)
+		
+	{
+			for (int j = 9; j >= i; j--)
+			{
+				cout << " ";
+			}
+			for (int k = 1; k <= (2 * i - 1); k++)
+			{
+				cout << " * ";
+			}
+		cout << endl;
+	}
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
