@@ -8,50 +8,50 @@ using namespace std;
 
 int main()
 {
-	//Zadanie N 1
-	/*int a, b;
+	////Zadanie N 1
+	//int a, b;
 
-	printf("Podaj dwie liczbe niezerowe rzeczewiste: ");
+	//printf("Podaj dwie liczbe niezerowe rzeczewiste: ");
 
-	scanf_s("%d", &a);
+	//scanf_s("%d", &a);
 
-	scanf_s("%d", &b);
+	//scanf_s("%d", &b);
+	//
+	//int sum, ilo, roz, iloraz;
+
+	//sum = pow(a + b, 2);
+
+	//roz = pow(a - b, 2);
+
+	//ilo = pow(a * b, 2);
+
+	//iloraz = pow(a / b, 2);
+
+	//printf("Suma cyfr kwadratow podanej liczby %d\n iloczyn kwadratow podanej liczby%d\n roznice kwadratow cyfr podanej liczby %d\n iloraz kwadratow podanej liczby %d\n ", sum, ilo, roz, iloraz);
+
+	//system("pause");
+	//
+	//return 0;
+
 	
-	int sum, ilo, roz, iloraz;
-
-	sum = pow(a + b, 2);
-
-	roz = pow(a - b, 2);
-
-	ilo = pow(a * b, 2);
-
-	iloraz = pow(a / b, 2);
-
-	printf("Suma cyfr kwadratow podanej liczby %d\n iloczyn kwadratow podanej liczby%d\n roznice kwadratow cyfr podanej liczby %d\n iloraz kwadratow podanej liczby %d\n ", sum, ilo, roz, iloraz);
-
-	system("pause");
-	
-	return 0;
-
-	*/
 	// koniec pirwszego zadania
 
 	//Zadanie N 2
 
-	/*int a;
+	//int a;
 
-	printf("Podaj masu w kg: ");
+	//printf("Podaj masu w kg: ");
 
-	scanf_s("%d", &a);
+	//scanf_s("%d", &a);
 
-	int ilo;
+	//int ilo;
 
-	ilo = a / 1000;
+	//ilo = a / 1000;
 
-	printf("Massa w tonnah %d\n ", ilo);
+	//printf("Massa w tonnah %d\n ", ilo);
 
-	return 0;
-*/
+	//return 0;
+
 	//koniec drugiego zadania
 
 	//Zadanie N3
@@ -97,7 +97,7 @@ int main()
 
 	//Zadanie 5
 
-	for (int i = 0; i < 4; i++)
+	/*for (int i = 0; i < 4; i++)
 	{
 		int N;
 
@@ -132,7 +132,52 @@ int main()
 	system("pause");
 
 	return 0;
+*/
 
+//int ile;
+//printf("Ile gwiazdek wpisac\n");
+//scanf_s("%d", &ile);
+//while (ile)
+//{
+//	printf("*");
+//	ile--;
+//}
+
+//int a = 1, k = -1;
+//do
+//{
+//	scanf_s("%d", &a);
+//	k++;
+//} while (a != 0);
+//printf("%d\n", k);
+
+//int n;
+//double a, min = DBL_MAX, max = DBL_MIN;
+//printf("N = ");
+//scanf_s("%d", &n);
+//unsigned i;
+//for (i = 1; i <= n; i++)
+//{
+//	printf("a [%d] =", i);
+//	scanf_s("%lf", &a);
+//	if (a < min) min = a;
+//	if (a > max) max = a;
+//}
+//printf("min = %lf max = %lf\n", min, max);
+
+int n;
+double a;
+printf("podaj a rzeczywiste oraz n calkowite\n");
+scanf_s("%lf %d", &a, &n);
+double sum = 1, pot = a;
+int minus = -1;
+for (int i = 0; i < n; i++)
+{
+	sum += minus * pot;
+	minus *= -1;
+	pot *= a;
+}
+printf("%lf\n", sum);
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
