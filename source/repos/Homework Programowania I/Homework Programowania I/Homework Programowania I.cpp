@@ -196,6 +196,46 @@ return 0;
 	}
 	*/
 
+/*int n, k = 0;
+scanf_s("%d", &n);
+while (n < 1)
+{
+	printf("Nie istnieje");
+	return 0;
+}
+int sum = 0;
+do
+{
+		printf("%d\n", sum = sum + k);
+		k++;
+} 
+while (sum <= n);
+return 0;*/
+
+int N, k = 0, n;
+//std::cout << "введите количество элементов в последовательности" << std::endl;
+printf("Wpisz ilosc ");
+scanf_s("%d", &N); // td::cin >> N;
+if ((!std::cin) || (N <= 0))
+{
+	printf("gg");
+	return 0;
+}
+int* arr = new int[N];
+std::cout << "wpisz" << ' ' << N << ' ' << "чисел последовательности" << std::endl;
+for (int i = 0; i < N; i++)
+	std::cin >> arr[i];
+sort(arr, arr + N, std::greater<int>());
+std::cout << "отсортировали:" << std::endl;
+for (int i = 0; i < N; i++)
+	std::cout << arr[i] << ' ';
+std::cout << std::endl;
+for (int i = 0; i < N; i++)
+{
+	if (arr[i] % 2 == 0) k++;
+	if (k == 3) { std::cout << "результат:" << ' ' << arr[i] << std::endl; break; }
+}
+return 0;
 }
 
 
