@@ -178,64 +178,77 @@ return 0;
 //	pot *= a;
 //}
 //printf("%lf\n", sum);
-/*
+//zadanie 1
 	int n, i;
+
 	unsigned long long silna = 1;
-	printf("Wpisz integer: ");
+
+	printf("Wpisz integer:\n ");
+
 	scanf_s("%d", &n);
 
 	if (n < 0)
-		printf("Error! Silna nie istnieje");
+
+		printf("Error! Silna nie istnieje\n");
+
 	else
 	{
 		for (i = 1; i <= n; ++i)
 		{
 			silna *= i;
 		}
-		printf("Factorial of %d = %llu", n, silna);
+		printf("Silnia of %d = %llu\n", n, silna);
 	}
-	*/
 
-/*int n, k = 0;
-scanf_s("%d", &n);
-while (n < 1)
-{
-	printf("Nie istnieje");
-	return 0;
-}
-int sum = 0;
-do
-{
+	//zadanie 2
+	int a, k = 0;
+
+	printf("Wpisz integer:\n ");
+
+	scanf_s("%d", &a);
+
+	while (a < 1)
+	{
+		printf("Nie istnieje\n");
+
+		return 0;
+	}
+
+	int sum = 0;
+
+	do
+	{
 		printf("%d\n", sum = sum + k);
-		k++;
-} 
-while (sum <= n);
-return 0;*/
 
-int N, k = 0, n;
-//std::cout << "введите количество элементов в последовательности" << std::endl;
-printf("Wpisz ilosc ");
-scanf_s("%d", &N); // td::cin >> N;
-if ((!std::cin) || (N <= 0))
-{
-	printf("gg");
+		k++;
+	} 
+	while (sum <= a);
+	{
+		printf("<= sum\n");
+	}
+	//zadanie 3 Suma liczb
+	int i2, N2;
+
+	unsigned long sum1;
+
+	printf("Wpisz wartosc N:\n ");
+
+	scanf_s("%d", &N2);
+
+	sum1 = 0;
+
+	//liczba sumy serii
+	
+	for (i2 = 1; i2 <= N2; i2++)
+	{
+		sum1 = sum1 + (i2 + i2);
+		printf("%d""\n ", sum1);
+	}
+
+	printf("Suma N: %ld\n", sum1);
+
 	return 0;
-}
-int* arr = new int[N];
-std::cout << "wpisz" << ' ' << N << ' ' << "чисел последовательности" << std::endl;
-for (int i = 0; i < N; i++)
-	std::cin >> arr[i];
-sort(arr, arr + N, std::greater<int>());
-std::cout << "отсортировали:" << std::endl;
-for (int i = 0; i < N; i++)
-	std::cout << arr[i] << ' ';
-std::cout << std::endl;
-for (int i = 0; i < N; i++)
-{
-	if (arr[i] % 2 == 0) k++;
-	if (k == 3) { std::cout << "результат:" << ' ' << arr[i] << std::endl; break; }
-}
-return 0;
+
 }
 
 
