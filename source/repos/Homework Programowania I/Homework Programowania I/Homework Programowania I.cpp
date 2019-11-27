@@ -2,12 +2,41 @@
 //
 
 #include <iostream>
-
+#include <ctime>;
+#include <cstdarg>
 using namespace std;
 
+//void randtab(int N, int* A)
+//{
+//	int i;
+//	for ( i = 0; i < N; i++) 
+//	{
+//		A[i] = 1 + rand() % 50;
+//		cout << A[i] << " ";
+//	}
+//	cout << endl;
+//}
+//void Compare(int* A, int* B, int* C, int N)
+//{
+//	for (int i = 0; i < N; ++i)
+//	{
+//			C[i] = A[i] >= B[i];
+//	}
+//
+//}
+//void Print(int A[], int N)
+//{
+//	for (int i = 0; i < N; ++i)
+//		cout << A[i] << " ";
+//	cout << endl;
+//}
 
-int main()
-{
+//int sum(int, int);
+//double sum(double, double);
+//void swap(int& a, int& b);
+//
+//int main()
+//{
 	////Zadanie N 1
 	//int a, b;
 
@@ -179,75 +208,269 @@ return 0;
 //}
 //printf("%lf\n", sum);
 //zadanie 1
-	int n, i;
+	//int n, i;
 
-	unsigned long long silna = 1;
+	//unsigned long long silna = 1;
 
-	printf("Wpisz integer:\n ");
+	//printf("Wpisz integer:\n ");
 
-	scanf_s("%d", &n);
+	//scanf_s("%d", &n);
 
-	if (n < 0)
+	//if (n < 0)
 
-		printf("Error! Silna nie istnieje\n");
+	//	printf("Error! Silna nie istnieje\n");
 
-	else
+	//else
+	//{
+	//	for (i = 1; i <= n; ++i)
+	//	{
+	//		silna *= i;
+	//	}
+	//	printf("Silnia of %d = %llu\n", n, silna);
+	//}
+
+	////zadanie 2
+	//int a, k = 1;
+
+	//printf("Wpisz integer:\n ");
+
+	//scanf_s("%d", &a);
+
+	//while (a <= 1)
+	//{
+	//	printf("Nie istnieje\n");
+
+	//	return 0;
+	//}
+
+	//int sum = 0;
+
+	//while (sum <= a);
+	//{
+	//	sum = sum + k;
+
+	//	
+	//	if (sum <= a)
+	//	{
+	//		printf("%d", sum);
+	//		k++;
+	//	}
+	//	printf("%d", a);
+	//}
+	////zadanie 3 Suma liczb
+	//int i2, N2;
+
+	//unsigned long sum1;
+
+	//printf("Wpisz wartosc N:\n ");
+
+	//scanf_s("%d", &N2);
+
+	//sum1 = 0;
+
+	////liczba sumy serii
+	//
+	//for (i2 = 1; i2 <= N2; i2++)
+	//{
+	//	sum1 = sum1 + (i2 + i2);
+	//	printf("%d""\n ", sum1);
+	//}
+
+	//printf("Suma N: %ld\n", sum1);
+
+	//return 0;
+
+//void pisz(void);
+//int a = 2, b = 3;
+//int c = sum(a, b);
+//cout << c << endl;
+//cout << sum(2.3, 4.5) << endl;
+//swap(a, b);
+//cout << "In main a = " << a << " b = " << b << endl;
+//cout << "In main" << &a << " " << &b << endl;
+//cout << "In fun" << &a << " " << &b << endl;
+////cout << silnia(5);
+////int c = a;
+////a = b;
+////b = c;
+////cout << "in fun a =" << a << "b = " << b << endl;
+//pisz();
+//}
+//
+//unsigned silnia(unsigned n)
+//{
+//	if (n == 0) return 1;
+//	else return n * silnia(n - 1);
+//}
+//void pisz()
+//{
+//	cout << "Hello word!" << endl;
+//}
+//double sum(double a, double b)
+//{
+//	return a + b;
+//}
+//void swap(int& a, int& b)
+//{
+//}
+//int sum(int a, int b)
+//{
+//	return a + b;
+//}
+//void swap(int* a, int* b)
+//{
+//	int c = *a;
+//	*a = *b;
+//}
+//
+//int main()
+//{
+//	int A, B; //zadanie 1
+//	cout << "Liczba A: " << endl;
+//	cin >> A;
+//	cout << "Liczba B: " << endl;
+//	cin >> B;
+//	if (A < B)
+//	{
+//		for ( A; A <= B; A++)
+//		{
+//			for (int i = 1; i <= A; i++)
+//			{
+//				cout << "  " << A << endl; 
+//			}
+//			cout << " = " << A << endl;
+//		}
+//
+//	}
+//	else
+//	{
+//		cout << "Blad albo A > B :(" << endl;
+//	}
+//
+//	int K; //zadanie 2
+//	int sum = 0;
+//	cout << "K = ";
+//
+//	cin >> K;
+//
+//	for (int i = 1; i <= K; i++)
+//	{
+//		for (int j = K; j >= 0; j--)
+//		{
+//			cout << "Zestaw : " << j << endl;
+//		}
+//		sum = K + sum;
+//		cout << "Elementow we wszystkich zestawu: " << sum << endl;
+//	}
+//
+//	int N;
+//	cout << "Wpisz iloszc elementow tablic: " << endl;
+//	cin >> N;
+//
+//	int* C = new int [N];
+//	int* D = new int[N];
+//	int* E = new int[N];
+//	srand(time(NULL));
+//	cout << "Tablica A: "<< endl;
+//	randtab(N, C);
+//	cout << "Tablica B: "<< endl;
+//	randtab(N, D);
+//	//Print(C, N);
+//	//Print(D, N);
+//	cout << endl;
+//	for (int i = 0; i < N; i++)
+//	{
+//		if (C[i] > D[i])
+//		{
+//			E[i] = C[i];
+//		}
+//		else if (C[i] < D[i])
+//		{
+//			E[i] = D[i];
+//		}
+//		else
+//		{
+//			E[i] = D[i];
+//		}
+//		cout << E[i] << " ";
+//	}
+//}
+int sum(int n, ...)
+{
+	int wynik = 0;
+	for (int* ptr = &n; n > 0; n--)
 	{
-		for (i = 1; i <= n; ++i)
-		{
-			silna *= i;
-		}
-		printf("Silnia of %d = %llu\n", n, silna);
+		wynik += *(++ptr);
 	}
-
-	//zadanie 2
-	int a, k = 0;
-
-	printf("Wpisz integer:\n ");
-
-	scanf_s("%d", &a);
-
-	while (a < 1)
+	return wynik;
+}
+int mnoz(int pierwszy, ...)
+{
+	va_list arg;
+	int iloczyn = 1, t;
+	va_start(arg, pierwszy);
+	for (t = pierwszy; t; t = va_arg(arg, int))
 	{
-		printf("Nie istnieje\n");
-
-		return 0;
+		iloczyn *= t;
 	}
-
-	int sum = 0;
-
-	do
+	va_end(arg);
+	return iloczyn;
+}
+int sum(int a, int b)
+{
+	return a + b;
+}
+int mnoz(int a, int b)
+{
+	return a * b;
+}
+int deleteEven(int a)
+{
+	if (a % 2 == 0) { return 0; }
+	else { return a; }
+}
+int dble(int a)
+{
+	return 2 * a;
+}
+void map(int* arr, unsigned size, int (*fun)(int))
+{
+	unsigned i;
+	for (i = 0; i < size; i++)
 	{
-		printf("%d\n", sum = sum + k);
-
-		k++;
-	} 
-	while (sum <= a);
-	{
-		printf("<= sum\n");
+		arr[i] = fun(arr[i]);
 	}
-	//zadanie 3 Suma liczb
-	int i2, N2;
-
-	unsigned long sum1;
-
-	printf("Wpisz wartosc N:\n ");
-
-	scanf_s("%d", &N2);
-
-	sum1 = 0;
-
-	//liczba sumy serii
-	
-	for (i2 = 1; i2 <= N2; i2++)
+}
+void print(int* arr, unsigned size)
+{
+	for (int i = 0; i < size; i++)
 	{
-		sum1 = sum1 + (i2 + i2);
-		printf("%d""\n ", sum1);
+		cout << arr[i] << " ";
 	}
-
-	printf("Suma N: %ld\n", sum1);
-
-	return 0;
+	cout << endl;
+}
+int main()
+{
+	cout << sum(3, 1, 2, 3) << endl;
+	cout << sum(5, -10, 12, 13, 14, 15) << endl;
+	cout << mnoz(1, 4, 5, 6, 0) << endl;
+	cout << mnoz(1, -4, -5, 6, -14, 0) << endl;
+	int (*fptr)(int, int) = NULL;
+	int result;
+	fptr = sum;
+	result = fptr(10, 40);
+	cout << result << endl;
+	fptr = mnoz;
+	result = fptr(10, 40);
+	cout << result << endl;
+	int a[] = { 1,2,3,4,5,6,7,8,9,10 };
+	int b[] = { 1,2,3,4,5,6,7,8,9,10 };
+	unsigned n1 = sizeof(a) / sizeof(int);
+	n2 = sizeof(b) / sizeof(int);
+	map(a, n1, deleteEven);
+	print(a, n1);
+	map(b, n2, dble);
+	print(b, n2);
 
 }
 
