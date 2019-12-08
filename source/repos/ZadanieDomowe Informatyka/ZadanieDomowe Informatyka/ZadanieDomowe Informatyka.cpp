@@ -80,7 +80,7 @@ int main(void)
 	print(a, n1);
 	map(a, n1, wartosc);
 	print(a, n1);
-	cout << "Sum of array" << arraySum(a, n1) << endl;
+	arraySum(a, n1);
 	double* b = new double[10];
 	for (int i = 0; i < n1; i++)
 	{
@@ -92,8 +92,9 @@ int main(void)
 		{
 			b[i] = a[i];
 		}
+		cout << b[i] << " ";
 	}
-
+	cout << endl;
 	system("pause");
 	return 0;
 }
