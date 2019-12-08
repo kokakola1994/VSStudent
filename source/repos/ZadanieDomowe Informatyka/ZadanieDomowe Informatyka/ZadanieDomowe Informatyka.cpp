@@ -5,6 +5,7 @@
 #include <math.h>
 #include <cstdarg>
 #include <stdarg.h>
+#include <numeric>
 using namespace std;
 
 //int Calc(int A, int B,int Op)
@@ -66,13 +67,35 @@ void print(double* arr, unsigned size)
 	}
 	cout << endl;
 }
+double arraySum(double a[], int n)
+{
+	int initial_sum = 0;
+	return accumulate(a, a + n, initial_sum);
+}
 
 int main(void)
 {
 	double a[] = { -1,20,3,-14,-5,61,-7,8,-9,10 };
 	unsigned n1 = sizeof(a) / sizeof(double);
+	print(a, n1);
 	map(a, n1, wartosc);
 	print(a, n1);
+	cout << "Sum of array" << arraySum(a, n1) << endl;
+	double* b = new double[10];
+	for (int i = 0; i < n1; i++)
+	{
+		if (arraySum(a, n1) > a[i])
+		{
+			b[i] = arraySum(a,n1);
+		}
+		else
+		{
+			b[i] = a[i];
+		}
+	}
+
+	system("pause");
+	return 0;
 }
 //
 //int main()
